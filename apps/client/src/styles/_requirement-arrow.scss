@@ -1,0 +1,95 @@
+@import "variables";
+
+svg.requirement-arrow
+{
+    position: relative;
+    overflow: visible;
+    width: 1em;
+    height: 1em;
+    opacity: 1;
+    z-index: 5;
+
+    transition: opacity $default-transition;
+    //filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.1)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.072));
+
+    &.hidden
+    {
+        opacity: 0;
+    }
+
+    & path:not(.marker)
+    {
+        fill: none;
+        stroke-width: 8px;
+    }
+
+    &.backdrop path
+    {
+        fill: none;
+        stroke-width: 10px;
+        stroke: white;
+    }
+
+    &:not(.required) path:not(.marker)
+    {
+        stroke-dasharray: 9, 4;
+    }
+
+    &:not(.violated)
+    {
+        &:not(.required)
+        {
+            .marker
+            {
+                fill: $requirement-ok-soft;
+            }
+
+            path
+            {
+                stroke: $requirement-ok-soft;
+            }
+        }
+
+        &.required
+        {
+            .marker
+            {
+                fill: $requirement-ok;
+            }
+
+            path
+            {
+                stroke: $requirement-ok;
+            }
+        }
+    }
+
+    &.violated
+    {
+        &:not(.required)
+        {
+            .marker
+            {
+                fill: $requirement-warning;
+            }
+
+            path
+            {
+                stroke: $requirement-warning;
+            }
+        }
+
+        &.required
+        {
+            .marker
+            {
+                fill: $requirement-error;
+            }
+
+            path
+            {
+                stroke: $requirement-error;
+            }
+        }
+    }
+}

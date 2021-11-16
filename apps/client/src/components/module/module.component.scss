@@ -1,0 +1,104 @@
+@import "variables";
+@import "utility";
+
+$line-height: 1.35em;
+$min-top-height: $line-height * 2.25;
+
+:host
+{
+    @extend .s-rounded;
+    display: block;
+    overflow: visible;
+    position: relative;
+
+    border: 1px solid;
+    transition: background $default-transition, border $default-transition, box-shadow $default-transition;
+
+    :host-context(.past) &:not(.not-highlighted)
+    {
+        $color: $past-color;
+        background: $color !important;
+        border-color: $color !important;
+    }
+
+    &.not-highlighted
+    {
+        $color: $not-highlighted-color;
+        background: $color;
+        border-color: $color;
+        box-shadow: none;
+    }
+
+    color: white;
+
+    font-size: $font-size-smaller;
+    padding: 0.25rem;
+    width: $module-width;
+    user-select: none;
+    hyphens: auto;
+
+    cursor: grab;
+
+    :host-context(.past) &
+    {
+        cursor: unset;
+    }
+
+    margin: $module-margin;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.module-name
+{
+    font-weight: bold;
+    display: -webkit-box;
+    overflow: hidden;
+
+    .compact &
+    {
+        text-wrap: none;
+        float: left;
+        max-width: $module-width - 2.5rem;
+        -webkit-line-clamp: 1;
+    }
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+    line-height: $line-height;
+}
+
+.module-top
+{
+    min-height: $min-top-height;
+}
+
+.module-ects
+{
+    &::after
+    {
+        content: " CP";
+    }
+
+    float: right;
+}
+
+.module-sws
+{
+    &::after
+    {
+        content: " SWS";
+    }
+
+    float: left;
+}
+
+.module-extra
+{
+    .module-sws + &
+    {
+        margin-left: 0.6em;
+    }
+    float: left;
+}

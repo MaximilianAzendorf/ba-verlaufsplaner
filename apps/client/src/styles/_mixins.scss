@@ -1,0 +1,32 @@
+@mixin arrow($direction, $size)
+{
+    width: 0;
+    height: 0;
+
+    @if $direction == down or $direction == up
+    {
+        border-left: $size solid transparent !important;
+        border-right: $size solid transparent !important;
+    }
+    @else
+    {
+        border-top: $size solid transparent !important;;
+        border-bottom: $size solid transparent !important;
+    }
+
+    @if $direction == up    { border-bottom: $size solid; }
+    @if $direction == right { border-left:   $size solid; }
+    @if $direction == down  { border-top:    $size solid; }
+    @if $direction == left  { border-right:  $size solid; }
+}
+
+@mixin blink-animation($name, $property, $lowColor, $highColor, $delay)
+{
+    animation: blink-animation-#{$name} 0.5s cubic-bezier(0,.37,.28,.99) $delay 2;
+    @keyframes blink-animation-#{$name}
+    {
+        0%   { #{$property}: $lowColor; }
+        50%  { #{$property}: $highColor; }
+        100% { #{$property}: $lowColor; }
+    }
+}

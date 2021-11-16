@@ -1,0 +1,149 @@
+@import "variables";
+
+:host
+{
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+}
+
+.module-badge
+{
+    display: inline-block;
+    overflow: visible;
+    color: white;
+
+    $padding: 0.06rem;
+    width: 1rem + 2 * $padding;
+    height: 1rem + 2 * $padding;
+    padding: $padding;
+
+    text-align: center;
+    border-radius: 100%;
+    background-color: red;
+    line-height: 1;
+    vertical-align: middle;
+    border: 1px solid;
+    font-size: 1rem;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+    :host-context(.not-highlighted) &
+    {
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    transition: background $default-transition, border $default-transition, box-shadow $default-transition;
+    animation: badge-entrance $default-transition;
+
+    @keyframes badge-entrance
+    {
+        0%   { opacity: 0; transform: scale(0.66); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+
+    span { display: inline-block; }
+
+    &:not(:last-child)
+    {
+        margin-right: 0.1rem;
+    }
+}
+
+@mixin badge-base($color)
+{
+    $border-darkness: 7%;
+
+    background-color: $color;
+
+    border-color: darken($color, $border-darkness);
+
+    :host-context(.not-highlighted) &
+    {
+        background-color: $not-highlighted-color;
+        border-color: darken($not-highlighted-color, $border-darkness);
+    }
+}
+
+.error-badge
+{
+    @include badge-base($error-color);
+}
+
+span.jam:not(.jam-write-f)
+{
+    font-size: 1.2em;
+    transform: translate(-3px, -3px);
+}
+
+span.jam-write-f
+{
+    font-size: 0.7em;
+    transform: translate(1px, -3px);
+}
+
+span.text
+{
+    font-size: 0.9em;
+    transform: scale(1.1, 0.9) translate(0.5px, -3px);
+    font-weight: bolder;
+    display: inline-block;
+    font-family: monospace;
+}
+
+.warning-badge
+{
+    @include badge-base($warning-color);
+    position: relative;
+}
+
+.passed-question-badge
+{
+    @include badge-base($warning-color);
+    position: relative;
+}
+
+.passed-badge
+{
+    @include badge-base($success-color);
+    position: relative;
+}
+
+.prepone-badge
+{
+    @include badge-base($gray-color);
+    position: relative;
+}
+
+.edit-badge
+{
+    @include badge-base($gray-color);
+    position: relative;
+    cursor: pointer;
+
+    &:hover
+    {
+        background-color: $primary-color;
+        border-color: $primary-color;
+    }
+}
+
+.prepone-indicator
+{
+    position: relative;
+    top: 1px;
+    left: -9px;
+    font-size: 0.7em;
+
+    float: right;
+    margin-left: 0.3rem;
+
+    i
+    {
+        display: inline;
+    }
+
+    i + i
+    {
+        margin-left: -6px;
+    }
+}

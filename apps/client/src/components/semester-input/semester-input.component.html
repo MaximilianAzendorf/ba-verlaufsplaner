@@ -1,0 +1,16 @@
+<div class="input-group" (focusout)="_checkAndEmit()">
+    <select class="term-select form-select"
+            [(ngModel)]="semester.term"
+            (ngModelChange)="_checkAndEmit()"
+            [ngModelOptions]="{standalone: true}"
+            [disabled]="allowedTerms.length <= 1">
+        <option value="winter" i18n>Winter term</option>
+        <option value="summer" i18n>Summer term</option>
+    </select>
+    <input class="form-input" type="number"
+           [min]="_minYear"
+           [max]="_maxYear"
+           [(ngModel)]="semester.year"
+           (ngModelChange)="_checkAndEmit()"
+           [ngModelOptions]="{standalone: true}">
+</div>

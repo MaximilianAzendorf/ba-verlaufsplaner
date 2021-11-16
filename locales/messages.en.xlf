@@ -1,0 +1,550 @@
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="en" datatype="plaintext">
+    <body>
+      <trans-unit id="2318332101182654284" datatype="html">
+        <source>Failed module</source>
+        <target state="final">Failed module</target>
+      </trans-unit><trans-unit id="3106856067768983768" datatype="html">
+        <source>no value</source>
+        <target state="final">no value</target>
+      </trans-unit><trans-unit id="2407651475340234982" datatype="html">
+        <source>Specify localizations</source>
+        <target state="final">Specify localizations</target>
+      </trans-unit><trans-unit id="8521995066870656078" datatype="html">
+        <source>No localizations</source>
+        <target state="final">No localizations</target>
+      </trans-unit><trans-unit id="6458584368694844844" datatype="html">
+        <source>Add a module</source>
+        <target state="final">Add a module</target>
+      </trans-unit>
+      <trans-unit id="2573546608775800114" datatype="html">
+        <source>Module passed?</source>
+        <target state="final">Module passed?</target>
+      </trans-unit>
+      <trans-unit id="8461609631969932886" datatype="html">
+        <source>Hide</source>
+        <target state="final">Hide</target>
+      </trans-unit><trans-unit id="5687997933277598393" datatype="html">
+        <source>You passed this module.</source>
+        <target state="final">You passed this module.</target>
+      </trans-unit>
+      
+      
+      <trans-unit id="5775346636203685655" datatype="html">
+        <source>Undo</source>
+        <target state="final">Undo</target>
+      </trans-unit><trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <target state="final">Name</target>
+      </trans-unit><trans-unit id="4955497164448858090" datatype="html">
+        <source>Short name (optional)</source>
+        <target state="final">Short name (optional)</target>
+      </trans-unit><trans-unit id="4334309110130696310" datatype="html">
+        <source>Extra info (optional)</source>
+        <target state="final">Extra info (optional)</target>
+      </trans-unit><trans-unit id="3382250908812839732" datatype="html">
+        <source>ECTS</source>
+        <target state="final">ECTS</target>
+      </trans-unit><trans-unit id="2760588464616756865" datatype="html">
+        <source>SWS (optional)</source>
+        <target state="final">SWS (optional)</target>
+      </trans-unit><trans-unit id="350527517111207682" datatype="html">
+        <source>Cycle</source>
+        <target state="final">Cycle</target>
+      </trans-unit><trans-unit id="7176240358721858552" datatype="html">
+        <source>Required ECTS (optional)</source>
+        <target state="final">Required ECTS (optional)</target>
+      </trans-unit><trans-unit id="1806667489382256324" datatype="html">
+        <source>Category</source>
+        <target state="final">Category</target>
+      </trans-unit><trans-unit id="5844464116542057968" datatype="html">
+        <source>(no category)</source>
+        <target state="final">(no category)</target>
+      </trans-unit><trans-unit id="8913435932896633472" datatype="html">
+        <source>Prepone allowed</source>
+        <target state="final">Prepone allowed</target>
+      </trans-unit><trans-unit id="4605864425009617908" datatype="html">
+        <source>Prerequisites</source>
+        <target state="final">Prerequisites</target>
+      </trans-unit><trans-unit id="4506786004240128185" datatype="html">
+        <source>Add prerequisite</source>
+        <target state="final">Add prerequisite</target>
+      </trans-unit><trans-unit id="8172572647452435846" datatype="html">
+        <source>Remove module</source>
+        <target state="final">Remove module</target>
+      </trans-unit><trans-unit id="7434620807721903973" datatype="html">
+        <source>Edit this module</source>
+        <target state="final">Edit this module</target>
+      </trans-unit><trans-unit id="895742256258998827" datatype="html">
+        <source><x id="PH"/> SWS</source>
+        <target state="final"><x id="PH"/> SWS</target>
+      </trans-unit>
+      <trans-unit id="4507011928867073540" datatype="html">
+        <source>Preponed module</source>
+        <target state="final">Preponed module</target>
+      </trans-unit><trans-unit id="9027611501639699783" datatype="html">
+        <source>You are logged in as a maintainer. In maintainer mode, you can edit module data and change or create base plans.</source>
+        <target state="final">You are logged in as a maintainer. In maintainer mode, you can edit module data and change or create base plans.</target>
+      </trans-unit>
+      <trans-unit id="3080483882937310852" datatype="html">
+        <source>Normal</source>
+        <target state="final">Normal</target>
+      </trans-unit>
+      <trans-unit id="4046649033157042513" datatype="html">
+        <source>Compact</source>
+        <target state="final">Compact</target>
+      </trans-unit>
+      <trans-unit id="1902100407096396858" datatype="html">
+        <source>Categories</source>
+        <target state="final">Categories</target>
+      </trans-unit>
+      <trans-unit id="1368388923673520351" datatype="html">
+        <source>Courses</source>
+        <target state="final">Courses</target>
+      </trans-unit><trans-unit id="1456143468495610262" datatype="html">
+        <source>Maintainer mode</source>
+        <target state="final">Maintainer mode</target>
+      </trans-unit><trans-unit id="5589685220261492197" datatype="html">
+        <source>Add module</source>
+        <target state="final">Add module</target>
+      </trans-unit><trans-unit id="1147233132309443190" datatype="html">
+        <source>Manage base plans</source>
+        <target state="final">Manage base plans</target>
+      </trans-unit><trans-unit id="7694544117693915935" datatype="html">
+        <source>This window allows you to change the base plans of the curriculum planner. <x id="START_TAG_SPAN"/>Be aware that all changes made to the base plans affect all users.<x id="CLOSE_TAG_SPAN"/></source>
+        <target state="final">This window allows you to change the base plans of the curriculum planner. <x id="START_TAG_SPAN"/>Be aware that all changes made to the base plans affect all users.<x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit>
+      <trans-unit id="3937492120558266832" datatype="html">
+        <source>View: normal</source>
+        <target state="final">View: normal</target>
+      </trans-unit>
+      <trans-unit id="3792814067378973663" datatype="html">
+        <source>View: compact</source>
+        <target state="final">View: compact</target>
+      </trans-unit><trans-unit id="4470319183319286245" datatype="html">
+        <source>Grouping: categories</source>
+        <target state="final">Grouping: categories</target>
+      </trans-unit><trans-unit id="7127117054244889732" datatype="html">
+        <source>Grouping: courses</source>
+        <target state="final">Grouping: courses</target>
+      </trans-unit>
+      
+      
+      <trans-unit id="3557733108342185886" datatype="html">
+        <source>Add a course</source>
+        <target state="final">Add a course</target>
+      </trans-unit>
+      <trans-unit id="5605123772636494177" datatype="html">
+        <source>Plan</source>
+        <target state="final">Plan</target>
+      </trans-unit><trans-unit id="2070824308277208204" datatype="html">
+        <source>Subplan</source>
+        <target state="final">Subplan</target>
+      </trans-unit><trans-unit id="4420669548751889539" datatype="html">
+        <source>No subplan</source>
+        <target state="final">No subplan</target>
+      </trans-unit><trans-unit id="5654179184302926700" datatype="html">
+        <source>Module ID</source>
+        <target state="final">Module ID</target>
+      </trans-unit><trans-unit id="6301017670594282438" datatype="html">
+        <source>The module ID must not be empty, unique to the plan and has to start with a letter.</source>
+        <target state="final">The module ID must not be empty, unique to the plan and has to start with a letter.</target>
+      </trans-unit>
+      <trans-unit id="8659171803005863162" datatype="html">
+        <source>Select a plan...</source>
+        <target state="final">Select a plan...</target>
+      </trans-unit><trans-unit id="5668758872097136654" datatype="html">
+        <source>Upload the selected plan as a new base plan</source>
+        <target state="final">Upload the selected plan as a new base plan</target>
+      </trans-unit><trans-unit id="7351069755973241663" datatype="html">
+        <source>Upload your selected local plan <x id="INTERPOLATION"/> as a new base plan with a new ID which you can choose in the next step. Note that you have to publish the plan in a second step before it is available to the user. </source>
+        <target state="final">Upload your selected local plan <x id="INTERPOLATION"/> as a new base plan with a new ID which you can choose in the next step. Note that you have to publish the plan in a second step before it is available to the user. </target>
+      </trans-unit><trans-unit id="2966460404634779981" datatype="html">
+        <source>Publish this plan</source>
+        <target state="final">Publish this plan</target>
+      </trans-unit><trans-unit id="1449613536602201347" datatype="html">
+        <source>Publish the selected plan <x id="INTERPOLATION"/> so it becomes available to the user. <x id="START_TAG_SPAN"/>Plans can not be deleted once they are published.<x id="CLOSE_TAG_SPAN"/></source>
+        <target state="final">Publish the selected plan <x id="INTERPOLATION"/> so it becomes available to the user. <x id="START_TAG_SPAN"/>Plans can not be deleted once they are published.<x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit><trans-unit id="2224750339191342461" datatype="html">
+        <source>Update the base plan of the selected plan</source>
+        <target state="final">Update the base plan of the selected plan</target>
+      </trans-unit><trans-unit id="2114504508178836300" datatype="html">
+        <source>Upload your changes made to the plan <x id="INTERPOLATION"/> and apply them to the existing base plan (with the ID <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/>). Consider creating a new version instead before updating existing base plans; changing existing base plans should only be done e.g. to fix mistakes in the respective base plan. </source>
+        <target state="final">Upload your changes made to the plan <x id="INTERPOLATION"/> and apply them to the existing base plan (with the ID <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/>). Consider creating a new version instead before updating existing base plans; changing existing base plans should only be done e.g. to fix mistakes in the respective base plan. </target>
+      </trans-unit><trans-unit id="4153035303743345019" datatype="html">
+        <source>Delete the base plan of the selected plan</source>
+        <target state="final">Delete the base plan of the selected plan</target>
+      </trans-unit><trans-unit id="6281580115070222242" datatype="html">
+        <source>Deletes the base plan (with the ID <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>) of the selected local plan. <x id="START_TAG_SPAN_1"/>Only unpublished plans can be deleted.<x id="CLOSE_TAG_SPAN"/></source>
+        <target state="final">Deletes the base plan (with the ID <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>) of the selected local plan. <x id="START_TAG_SPAN_1"/>Only unpublished plans can be deleted.<x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit><trans-unit id="1436490309459525500" datatype="html">
+        <source>Confirm action</source>
+        <target state="final">Confirm action</target>
+      </trans-unit><trans-unit id="3066726599042289689" datatype="html">
+        <source>You are about to <x id="START_TAG_SPAN"/>publish the plan with the ID<x id="CLOSE_TAG_SPAN"/>  <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. Other changes you made will also take effect; make sure the plan is correct. <x id="START_TAG_SPAN"/>If you publish this plan, you will not be able to delete it anymore.<x id="CLOSE_TAG_SPAN"/></source>
+        <target state="final">You are about to <x id="START_TAG_SPAN"/>publish the plan with the ID<x id="CLOSE_TAG_SPAN"/>  <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. Other changes you made will also take effect; make sure the plan is correct. <x id="START_TAG_SPAN"/>If you publish this plan, you will not be able to delete it anymore.<x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit><trans-unit id="1431806685633129547" datatype="html">
+        <source>Confirm publishing</source>
+        <target state="final">Confirm publishing</target>
+      </trans-unit><trans-unit id="1828278875991576032" datatype="html">
+        <source>You are about to <x id="START_TAG_SPAN"/>create a new base plan<x id="CLOSE_TAG_SPAN"/> with the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/>. Make sure the plan is correct and enter the new unique ID of the new base plan below before confirming this action. </source>
+        <target state="final">You are about to <x id="START_TAG_SPAN"/>create a new base plan<x id="CLOSE_TAG_SPAN"/> with the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/>. Make sure the plan is correct and enter the new unique ID of the new base plan below before confirming this action. </target>
+      </trans-unit><trans-unit id="5317200745895121293" datatype="html">
+        <source>Note that the plan does not become available immediately. You have to publish it as a second step before the user can use this new plan. </source>
+        <target state="final">Note that the plan does not become available immediately. You have to publish it as a second step before the user can use this new plan. </target>
+      </trans-unit><trans-unit id="2271779522219749317" datatype="html">
+        <source>new unique ID</source>
+        <target state="final">new unique ID</target>
+      </trans-unit><trans-unit id="443126599233689211" datatype="html">
+        <source>repeat the ID</source>
+        <target state="final">repeat the ID</target>
+      </trans-unit><trans-unit id="2225018988022692732" datatype="html">
+        <source>Create new base plan</source>
+        <target state="final">Create new base plan</target>
+      </trans-unit><trans-unit id="7710195820874574475" datatype="html">
+        <source>You are about to <x id="START_TAG_SPAN"/>update the base plan with the ID<x id="CLOSE_TAG_SPAN"/>  <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. Make sure the plan is correct and consider creating a new version instead of updating this existing base plan. </source>
+        <target state="final">You are about to <x id="START_TAG_SPAN"/>update the base plan with the ID<x id="CLOSE_TAG_SPAN"/>  <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. Make sure the plan is correct and consider creating a new version instead of updating this existing base plan. </target>
+      </trans-unit><trans-unit id="2636341142529824389" datatype="html">
+        <source>Confirm update</source>
+        <target state="final">Confirm update</target>
+      </trans-unit><trans-unit id="3033507790350750102" datatype="html">
+        <source>You are about to <x id="START_TAG_SPAN"/>delete the base plan with the ID<x id="CLOSE_TAG_SPAN"/>  <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. </source>
+        <target state="final">You are about to <x id="START_TAG_SPAN"/>delete the base plan with the ID<x id="CLOSE_TAG_SPAN"/>  <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. </target>
+      </trans-unit><trans-unit id="2470622418239063097" datatype="html">
+        <source>Confirm deletion</source>
+        <target state="final">Confirm deletion</target>
+      </trans-unit>
+      <trans-unit id="4156022415020826776" datatype="html">
+        <source>Start semester</source>
+        <target state="final">Start semester</target>
+      </trans-unit>
+      <trans-unit id="3249513483374643425" datatype="html">
+        <source>Add</source>
+        <target state="final">Add</target>
+      </trans-unit>
+      <trans-unit id="3894950702316166331" datatype="html">
+        <source>Loading...</source>
+        <target state="final">Loading...</target>
+      </trans-unit><trans-unit id="3687661447330305450" datatype="html">
+        <source>Because you are logged in as a maintainer, you can see obsolete and unpublished plans. </source>
+        <target state="final">Because you are logged in as a maintainer, you can see obsolete and unpublished plans. </target>
+      </trans-unit>
+      <trans-unit id="2724055831234181057" datatype="html">
+        <source>Version</source>
+        <target state="final">Version</target>
+      </trans-unit>
+      <trans-unit id="6425069776691743707" datatype="html">
+        <source>Select a plan version...</source>
+        <target state="final">Select a plan version...</target>
+      </trans-unit><trans-unit id="7157622747114370352" datatype="html">
+        <source>New choice ID</source>
+        <target state="final">New choice ID</target>
+      </trans-unit><trans-unit id="6845504067523246039" datatype="html">
+        <source>Choice <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/></source>
+        <target state="final">Choice <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit><trans-unit id="6937940812113997206" datatype="html">
+        <source>New alternative ID</source>
+        <target state="final">New alternative ID</target>
+      </trans-unit><trans-unit id="4266780979356545847" datatype="html">
+        <source>Alternative <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/></source>
+        <target state="final">Alternative <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit><trans-unit id="3986933774099948" datatype="html">
+        <source>Choices have to contain at least one alternative.</source>
+        <target state="final">Choices have to contain at least one alternative.</target>
+      </trans-unit>
+      <trans-unit id="5890833044137447416" datatype="html">
+        <source>Welcome!</source>
+        <target state="final">Welcome!</target>
+      </trans-unit>
+      <trans-unit id="37775289117013847" datatype="html">
+        <source>To use this application, please <x id="START_LINK"/>log in<x id="CLOSE_LINK"/>.</source>
+        <target state="final">To use this application, please <x id="START_LINK"/>log in<x id="CLOSE_LINK"/>.</target>
+      </trans-unit>
+      <trans-unit id="7166370333156491993" datatype="html">
+        <source>Alternatively, you can <x id="START_LINK"/>try it out locally<x id="CLOSE_LINK"/>.</source>
+        <target state="final">Alternatively, you can <x id="START_LINK"/>try it out locally<x id="CLOSE_LINK"/>.</target>
+      </trans-unit><trans-unit id="8040881171107393560" datatype="html">
+        <source>ID</source>
+        <target state="final">ID</target>
+      </trans-unit><trans-unit id="7899727865734842917" datatype="html">
+        <source>The name of this plan. A user cannot add two or more plans that have the same name (e.g. different versions of the same plan).</source>
+        <target state="final">The name of this plan. A user cannot add two or more plans that have the same name (e.g. different versions of the same plan).</target>
+      </trans-unit><trans-unit id="428306601287005211" datatype="html">
+        <source>The version usually is a year and discerns different versions of the same plan (which should share the same name).</source>
+        <target state="final">The version usually is a year and discerns different versions of the same plan (which should share the same name).</target>
+      </trans-unit><trans-unit id="2587448794069804317" datatype="html">
+        <source>Start terms</source>
+        <target state="final">Start terms</target>
+      </trans-unit><trans-unit id="5818211947850652943" datatype="html">
+        <source>In which terms this plan can be started. For example, when only the winter term is checked, users can not select a summer semester as the start semester.</source>
+        <target state="final">In which terms this plan can be started. For example, when only the winter term is checked, users can not select a summer semester as the start semester.</target>
+      </trans-unit><trans-unit id="7369921822977518344" datatype="html">
+        <source>Settings for <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> (<x id="INTERPOLATION_1"/>)</source>
+        <target state="final">Settings for <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> (<x id="INTERPOLATION_1"/>)</target>
+      </trans-unit>
+      <trans-unit id="7026108419792473073" datatype="html">
+        <source>Migrate plan</source>
+        <target state="final">Migrate plan</target>
+      </trans-unit><trans-unit id="7302514038065326571" datatype="html">
+        <source>Select new base plan...</source>
+        <target state="final">Select new base plan...</target>
+      </trans-unit><trans-unit id="125952531392026893" datatype="html">
+        <source>Migrate to the selected base plan</source>
+        <target state="final">Migrate to the selected base plan</target>
+      </trans-unit>
+      <trans-unit id="8688442715973149252" datatype="html">
+        <source>Remove plan</source>
+        <target state="final">Remove plan</target>
+      </trans-unit>
+      <trans-unit id="2159130950882492111" datatype="html">
+        <source>Cancel</source>
+        <target state="final">Cancel</target>
+      </trans-unit>
+      <trans-unit id="9178182467454450952" datatype="html">
+        <source>Confirm</source>
+        <target state="final">Confirm</target>
+      </trans-unit><trans-unit id="4357663034852433328" datatype="html">
+        <source>Properties of <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/><x id="START_TAG_SPAN_1"/>new plan<x id="CLOSE_TAG_SPAN"/> (<x id="INTERPOLATION_1"/>) </source>
+        <target state="final">Properties of <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/><x id="START_TAG_SPAN_1"/>new plan<x id="CLOSE_TAG_SPAN"/> (<x id="INTERPOLATION_1"/>) </target>
+      </trans-unit><trans-unit id="7045123878111147511" datatype="html">
+        <source>Required</source>
+        <target state="final">Required</target>
+      </trans-unit><trans-unit id="4814285799071780083" datatype="html">
+        <source>Remove</source>
+        <target state="final">Remove</target>
+      </trans-unit><trans-unit id="6286037250766429054" datatype="html">
+        <source>yes</source>
+        <target state="final">yes</target>
+      </trans-unit><trans-unit id="2420525563530770652" datatype="html">
+        <source>no</source>
+        <target state="final">no</target>
+      </trans-unit><trans-unit id="7351152234189377117" datatype="html">
+        <source>Plan choices</source>
+        <target state="final">Plan choices</target>
+      </trans-unit><trans-unit id="2382280829296466299" datatype="html">
+        <source>Plan choices provide several alternatives (containing modules) from which the user has to select exactly one.</source>
+        <target state="final">Plan choices provide several alternatives (containing modules) from which the user has to select exactly one.</target>
+      </trans-unit>
+      
+      <trans-unit id="7515883357904500238" datatype="html">
+        <source>Are you sure?</source>
+        <target state="final">Are you sure?</target>
+      </trans-unit><trans-unit id="701276183374590869" datatype="html">
+        <source>You are about to remove <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> from your plan.</source>
+        <target state="final">You are about to remove <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> from your plan.</target>
+      </trans-unit>
+      
+      <trans-unit id="1640194314437667323" datatype="html">
+        <source>Confirm removal</source>
+        <target state="final">Confirm removal</target>
+      </trans-unit>
+      <trans-unit id="6029829557483992391" datatype="html">
+        <source>Total: <x id="PH"/> CP</source>
+        <target state="final">Total: <x id="PH"/> CP</target>
+      </trans-unit><trans-unit id="4914546203623630813" datatype="html">
+        <source><x id="START_TAG_SPAN"/><x id="CLOSE_TAG_SPAN"/> Semester</source>
+        <target state="final"><x id="START_TAG_SPAN"/><x id="CLOSE_TAG_SPAN"/> Semester</target>
+      </trans-unit><trans-unit id="5992492023250804803" datatype="html">
+        <source><x id="INTERPOLATION"/> CP</source>
+        <target state="final"><x id="INTERPOLATION"/> CP</target>
+      </trans-unit>
+      
+      <trans-unit id="577131335532312808" datatype="html">
+        <source>Add semester</source>
+        <target state="final">Add semester</target>
+      </trans-unit>
+      <trans-unit id="3319869189033007427" datatype="html">
+        <source>Remove semester</source>
+        <target state="final">Remove semester</target>
+      </trans-unit>
+      <trans-unit id="7229322658964992431" datatype="html">
+        <source>Required prerequisite</source>
+        <target state="final">Required prerequisite</target>
+      </trans-unit>
+      <trans-unit id="6755381006589246462" datatype="html">
+        <source>Recommended prerequisite</source>
+        <target state="final">Recommended prerequisite</target>
+      </trans-unit>
+      <trans-unit id="7056768688674505176" datatype="html">
+        <source>Courses are loading...</source>
+        <target state="final">Courses are loading...</target>
+      </trans-unit>
+      <trans-unit id="2278319217411345860" datatype="html">
+        <source>No active courses.</source>
+        <target state="final">No active courses.</target>
+      </trans-unit><trans-unit id="8631859997228132412" datatype="html">
+        <source>There was an error</source>
+        <target state="final">There was an error</target>
+      </trans-unit><trans-unit id="7774334028863100396" datatype="html">
+        <source>Reason: <x id="INTERPOLATION"/></source>
+        <target state="final">Reason: <x id="INTERPOLATION"/></target>
+      </trans-unit><trans-unit id="4073798495355008043" datatype="html">
+        <source>You may need to reload the page. If this problem persists, please report it.</source>
+        <target state="final">You may need to reload the page. If this problem persists, please report it.</target>
+      </trans-unit>
+      
+      
+      <trans-unit id="6942914903641996670" datatype="html">
+        <source>Reload page</source>
+        <target state="final">Reload page</target>
+      </trans-unit>
+      
+      <trans-unit id="1142309888461362059" datatype="html">
+        <source>Winter term</source>
+        <target state="final">Winter term</target>
+      </trans-unit>
+      <trans-unit id="5589642560160244286" datatype="html">
+        <source>Summer term</source>
+        <target state="final">Summer term</target>
+      </trans-unit><trans-unit id="1769763767639879766" datatype="html">
+        <source>Obsolete after</source>
+        <target state="final">Obsolete after</target>
+      </trans-unit><trans-unit id="7997702578492367872" datatype="html">
+        <source>If this date is set, users can not add this plan after the given date and users that already use this plan will get a warning. Consider adding migration options if you make a plan obsolete.</source>
+        <target state="final">If this date is set, users can not add this plan after the given date and users that already use this plan will get a warning. Consider adding migration options if you make a plan obsolete.</target>
+      </trans-unit><trans-unit id="6104334456357948331" datatype="html">
+        <source>Migratable to</source>
+        <target state="final">Migratable to</target>
+      </trans-unit><trans-unit id="4236709710210809425" datatype="html">
+        <source>User can migrate this plan to all plans that are given here. This is usually done for plans that became obsolete because a newer version (to which the old plan sould be migrated) became available.</source>
+        <target state="final">User can migrate this plan to all plans that are given here. This is usually done for plans that became obsolete because a newer version (to which the old plan sould be migrated) became available.</target>
+      </trans-unit><trans-unit id="277347696579019699" datatype="html">
+        <source>Comma-separated list of plan IDs</source>
+        <target state="final">Comma-separated list of plan IDs</target>
+      </trans-unit><trans-unit id="1349547954574351547" datatype="html">
+        <source>Add category</source>
+        <target state="final">Add category</target>
+      </trans-unit><trans-unit id="3522485995867593012" datatype="html">
+        <source>A plan has to have at least one start term.</source>
+        <target state="final">A plan has to have at least one start term.</target>
+      </trans-unit><trans-unit id="5648281208762033715" datatype="html">
+        <source>Show and edit categories</source>
+        <target state="final">Show and edit categories</target>
+      </trans-unit><trans-unit id="4884411217909849041" datatype="html">
+        <source>Hide categories</source>
+        <target state="final">Hide categories</target>
+      </trans-unit><trans-unit id="5909243995607931670" datatype="html">
+        <source>Show and edit plan choices</source>
+        <target state="final">Show and edit plan choices</target>
+      </trans-unit><trans-unit id="5959810954549640247" datatype="html">
+        <source>Hide plan choices</source>
+        <target state="final">Hide plan choices</target>
+      </trans-unit>
+      <trans-unit id="1420436207595466503" datatype="html">
+        <source>Multiple courses</source>
+        <target state="final">Multiple courses</target>
+      </trans-unit><trans-unit id="4786933982996566259" datatype="html">
+        <source>No visible courses</source>
+        <target state="final">No visible courses</target>
+      </trans-unit><trans-unit id="1716574804778299534" datatype="html">
+        <source>No courses</source>
+        <target state="final">No courses</target>
+      </trans-unit><trans-unit id="1397786939123704307" datatype="html">
+        <source>RWTH Curriculum Planner</source>
+        <target state="final">RWTH Curriculum Planner</target>
+      </trans-unit><trans-unit id="1256697319281470794" datatype="html">
+        <source>Show this problem</source>
+        <target state="final">Show this problem</target>
+      </trans-unit><trans-unit id="6404285662311920422" datatype="html">
+        <source>Hide this problem</source>
+        <target state="final">Hide this problem</target>
+      </trans-unit><trans-unit id="1867992058937397585" datatype="html">
+        <source>Module</source>
+        <target state="final">Module</target>
+      </trans-unit><trans-unit id="692797457766922083" datatype="html">
+        <source>Go to this problem</source>
+        <target state="final">Go to this problem</target>
+      </trans-unit><trans-unit id="4902817035128594900" datatype="html">
+        <source>Description</source>
+        <target state="final">Description</target>
+      </trans-unit>
+      
+      <trans-unit id="4221042196936324014" datatype="html">
+        <source>Redo</source>
+        <target state="final">Redo</target>
+      </trans-unit>
+      <trans-unit id="1959989882528099355" datatype="html">
+        <source>Add course</source>
+        <target state="final">Add course</target>
+      </trans-unit><trans-unit id="798066276988263173" datatype="html">
+        <source>Visible courses</source>
+        <target state="final">Visible courses</target>
+      </trans-unit>
+      
+      <trans-unit id="5716859601539932392" datatype="html">
+        <source>Course settings</source>
+        <target state="final">Course settings</target>
+      </trans-unit><trans-unit id="5779056291747305363" datatype="html">
+        <source>Hidden Problems</source>
+        <target state="final">Hidden Problems</target>
+      </trans-unit><trans-unit id="7854578989283397034" datatype="html">
+        <source>Not logged in</source>
+        <target state="final">Not logged in</target>
+      </trans-unit>
+      
+      <trans-unit id="7507948636555938109" datatype="html">
+        <source>Log out</source>
+        <target state="final">Log out</target>
+      </trans-unit>
+      <trans-unit id="2336550011721758066" datatype="html">
+        <source>Log in</source>
+        <target state="final">Log in</target>
+      </trans-unit>
+      <trans-unit id="8350842278008299220" datatype="html">
+        <source>There is a problem with the server.</source>
+        <target state="final">There is a problem with the server.</target>
+      </trans-unit>
+      <trans-unit id="5386215031897064267" datatype="html">
+        <source>This module has the module "<x id="PH"/>" as an unmet prerequisite.</source>
+        <target state="final">This module has the module "<x id="PH"/>" as an unmet prerequisite.</target>
+      </trans-unit>
+      <trans-unit id="2549450298718173447" datatype="html">
+        <source>This module has the module "<x id="PH"/>" as an unmet recommended prerequisite.</source>
+        <target state="final">This module has the module "<x id="PH"/>" as an unmet recommended prerequisite.</target>
+      </trans-unit>
+      <trans-unit id="5034696448542476129" datatype="html">
+        <source>This module has an unmet prerequisite.</source>
+        <target state="final">This module has an unmet prerequisite.</target>
+      </trans-unit>
+      <trans-unit id="882788310440734883" datatype="html">
+        <source>This module has an unmet recommended prerequisite.</source>
+        <target state="final">This module has an unmet recommended prerequisite.</target>
+      </trans-unit>
+      <trans-unit id="9121875193395299826" datatype="html">
+        <source>This module can only be taken with <x id="PH"/> CP or more.</source>
+        <target state="final">This module can only be taken with <x id="PH"/> CP or more.</target>
+      </trans-unit><trans-unit id="4177950327381540025" datatype="html">
+        <source>The course <x id="PH"/> has more than 30 CP worth of preponed modules.</source>
+        <target state="final">The course <x id="PH"/> has more than 30 CP worth of preponed modules.</target>
+      </trans-unit>
+      <trans-unit id="5751227249305722805" datatype="html">
+        <source>Status of this module is unknown.</source>
+        <target state="final">Status of this module is unknown.</target>
+      </trans-unit><trans-unit id="860395747928002518" datatype="html">
+        <source>The course "<x id="PH"/>" has no selected choice of "<x id="PH_1"/>".</source>
+        <target state="final">The course "<x id="PH"/>" has no selected choice of "<x id="PH_1"/>".</target>
+      </trans-unit><trans-unit id="2895941032361926600" datatype="html">
+        <source>The course "<x id="PH"/> (<x id="PH_1"/>)" is obsolete and should be migrated to a newer version.</source>
+        <target state="final">The course "<x id="PH"/> (<x id="PH_1"/>)" is obsolete and should be migrated to a newer version.</target>
+      </trans-unit><trans-unit id="7561810936153049028" datatype="html">
+        <source>The course "<x id="PH"/> (<x id="PH_1"/>)" is obsolete.</source>
+        <target state="final">The course "<x id="PH"/> (<x id="PH_1"/>)" is obsolete.</target>
+      </trans-unit><trans-unit id="8252925367734366799" datatype="html">
+        <source>The plan "<x id="PH"/> (<x id="PH_1"/>)" is not published.</source>
+        <target state="final">The plan "<x id="PH"/> (<x id="PH_1"/>)" is not published.</target>
+      </trans-unit><trans-unit id="4838766874470354475" datatype="html">
+        <source>There is a problem with the database.</source>
+        <target state="final">There is a problem with the database.</target>
+      </trans-unit><trans-unit id="132428287841707177" datatype="html">
+        <source>Your browser may not support the local testing mode; you may have to log in or use a different browser.</source>
+        <target state="final">Your browser may not support the local testing mode; you may have to log in or use a different browser.</target>
+      </trans-unit><trans-unit id="3628127143071124194" datatype="html">
+        <source>SS</source>
+        <target state="final">SS</target>
+      </trans-unit><trans-unit id="2776201535634372722" datatype="html">
+        <source>WS</source>
+        <target state="final">WS</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

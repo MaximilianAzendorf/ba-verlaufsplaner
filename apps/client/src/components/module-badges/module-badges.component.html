@@ -1,0 +1,55 @@
+<vp-module-badge *ngFor="let problem of _problems.problemsOfModule(moduleKey); trackBy: _problemTrackFn"
+                 [type]="problem.severity">
+
+    <div *ngIf="problem.severity == 'question'" class="badge-overlay">
+        <div class="overlay-content">
+            <ng-container i18n>Module passed?</ng-container>
+            <div class="btn-group btn-group-block">
+                <button class="btn btn-action btn-sm btn-success"
+                        [class.disabled]="_problems.hasErrors(moduleKey)"
+                        (click)="_modulePassed()">
+                    <i class="icon icon-check"></i>
+                </button>
+                <button class="btn btn-action btn-sm btn-error" (click)="_moduleFailed()">
+                    <i class="icon icon-cross"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="problem.severity == 'warning' || problem.severity == 'error'" class="badge-overlay">
+        <span class="overlay-content">
+            {{problem.messageShort || problem.message}}
+            <a class="link-action" (click)="_problems.markAsIgnored(problem)">
+                <i class="jam jam-eye-close-f"></i> <span class="link-action-text" i18n>Hide</span>
+            </a>
+        </span>
+    </div>
+
+</vp-module-badge>
+
+<vp-module-badge [type]="'passed'" *ngIf="_planLogic.modulePast(moduleKey) && _modules.get(moduleKey).passed">
+    <div class="badge-overlay">
+        <span class="overlay-content">
+            <ng-container i18n>You passed this module.</ng-container>
+            <a class="link-action" (click)="_moduleResetPassed()">
+                <i class="jam jam-undo"></i> <span class="link-action-text" i18n>Undo</span>
+            </a>
+        </span>
+    </div>
+</vp-module-badge>
+
+<vp-module-badge [type]="'prepone'" *ngIf="_modules.get(moduleKey).offset < 0">
+    <div class="badge-overlay">
+        <span class="overlay-content">
+            <ng-container i18n>Preponed module</ng-container>
+        </span>
+    </div>
+</vp-module-badge>
+
+<vp-module-badge [type]="'edit'"
+                 *ngIf="_planLogic.maintainerMode"
+                 class="tooltip tooltip-left"
+                 data-tooltip="Edit this module" i18n-data-tooltip
+                 (click)="_singleton.moduleEdit.show(moduleKey)">
+</vp-module-badge>

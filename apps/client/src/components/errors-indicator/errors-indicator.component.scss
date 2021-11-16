@@ -1,0 +1,29 @@
+@import "variables";
+
+:host
+{
+    display: inline-block;
+    &:not(:first-child)
+    {
+        margin-left: 1rem;
+    }
+    position: relative;
+    top: -0.07rem;
+
+    user-select: none;
+}
+
+.count
+{
+    display: inline-block;
+    position: relative;
+    top: 0.1rem;
+    margin-left: 0.2rem;
+    font-weight: bold;
+    color: white !important;
+}
+
+vp-module-badge
+{
+    margin-left: 0.4rem;
+}

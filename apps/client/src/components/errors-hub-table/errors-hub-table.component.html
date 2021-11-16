@@ -1,0 +1,40 @@
+<table>
+    <thead>
+        <tr>
+            <th></th>
+            <th *ngIf="!_onlyGlobal" i18n>Module</th>
+            <th i18n>Description</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let problem of problems">
+            <td>
+                <vp-module-badge [type]="problem.severity"></vp-module-badge>
+            </td>
+            <td *ngIf="!_onlyGlobal">
+                <ng-container *ngIf="problem.module">{{_loc.select(_modules.get(problem.module).name)}}</ng-container>
+            </td>
+            <td>
+                <div class="message">{{problem.message}}</div>
+            </td>
+            <td>
+                <span class="input-group">
+                    <button *ngIf="!_planProblems.isIgnored(problem)"
+                            class="btn btn-link btn-sm input-group-btn error-action tooltip tooltip-bottom"
+                            data-tooltip="Go to this problem" i18n-data-tooltip
+                            (click)="_goTo(problem)">
+                        <i class="icon icon-forward"></i>
+                    </button>
+                    <button class="btn btn-link btn-sm input-group-btn error-action tooltip tooltip-bottom"
+                            [attr.data-tooltip]="_hideShowTooltip(problem)"
+                            (click)="_hideShow(problem)">
+                        <i class="jam"
+                           [class.jam-eye-close-f]="!_planProblems.isIgnored(problem)"
+                           [class.jam-eye-f]="_planProblems.isIgnored(problem)"></i>
+                    </button>
+                </span>
+            </td>
+        </tr>
+    </tbody>
+</table>

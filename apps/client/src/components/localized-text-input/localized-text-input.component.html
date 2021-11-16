@@ -1,0 +1,38 @@
+<div *ngIf="_isPlainString">
+    <input
+           class="form-input"
+           type="text"
+           placeholder="no value" i18n-placeholder
+           [class.is-error]="!emptyAllowed && !locString"
+           [ngModel]="locString"
+           (ngModelChange)="locStringChange.emit($event)">
+    <button class="btn btn-link btn-sm float-right" (click)="_expand()">
+        <i class="icon btn-icon icon-arrow-down"></i> <ng-container i18n>Specify localizations</ng-container>
+    </button>
+    <div class="clear-float"></div>
+</div>
+
+<div *ngIf="!_isPlainString">
+    <div class="input-group top">
+        <span class="input-group-addon addon-sm language-tag">de</span>
+        <input class="form-input input-sm"
+               type="text"
+               placeholder="no value" i18n-placeholder
+               [class.is-error]="!emptyAllowed && !locString['de']"
+               [ngModel]="locString['de']"
+               (ngModelChange)="locStringChange.emit({'de': $event, 'en': locString['en']})">
+    </div>
+    <div class="input-group bottom nudge-up">
+        <span class="input-group-addon addon-sm language-tag">en</span>
+        <input class="form-input input-sm"
+               type="text"
+               placeholder="no value" i18n-placeholder
+               [class.is-error]="!emptyAllowed && !locString['en']"
+               [ngModel]="locString['en']"
+               (ngModelChange)="locStringChange.emit({'de': locString['de'], 'en': $event})">
+    </div>
+    <button class="btn btn-link btn-sm float-right" (click)="_collapse()">
+        <i class="icon btn-icon icon-arrow-up"></i> <ng-container i18n>No localizations</ng-container>
+    </button>
+    <div class="clear-float"></div>
+</div>

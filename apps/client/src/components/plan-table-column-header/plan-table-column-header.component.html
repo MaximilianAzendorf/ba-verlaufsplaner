@@ -1,0 +1,23 @@
+<div class="inner"
+     [class.blocked]="_logic.offsetBlocked(offset)"
+     [class.past]="_logic.offsetPast(offset)"
+     [class.left-end]="!_logic.offsetBlocked(offset - 1)"
+     [class.right-end]="!_logic.offsetBlocked(offset + 1)">
+    <div class="left">
+        <span class="ordinal">
+            <ng-container i18n><span class="cardinal" [innerHTML]="(offset + 1) | ordinal | safeHtml"></span> Semester</ng-container>
+        </span>
+        <span class="name">
+            {{_semesterName.format(_planMeta.startSemester, offset)}}
+        </span>
+    </div>
+    <div class="right">
+        <span #ects
+              class="ects chip tooltip multiline tooltip-bottom"
+              [attr.data-tooltip]="_totalEctsString">
+            <ng-container i18n>{{_planMeta.ectsSum(offset)}} CP</ng-container>
+        </span>
+    </div>
+    <div class="clear-float"></div>
+</div>
+

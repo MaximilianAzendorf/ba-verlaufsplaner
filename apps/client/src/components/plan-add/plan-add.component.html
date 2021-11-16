@@ -1,0 +1,74 @@
+<div #modal class="modal modal-custom-size"
+     [class.active]="_visible"
+     (keyup.escape)="close()"
+     (keyup.enter)="_add()"
+     tabindex="0">
+    <a (click)="_visible = false" class="href modal-overlay" aria-label="Close"></a>
+    <div class="modal-container">
+        <div class="modal-header">
+            <a class="href btn btn-clear float-right" aria-label="Close" (click)="close()"></a>
+            <span class="modal-title h5" i18n>Add a course</span>
+        </div>
+        <div class="modal-body">
+            <div class="content">
+                <ng-container *ngIf="_loading" i18n>Loading...</ng-container>
+                <p *ngIf="_auth.isMaintainer" i18n>Because you are logged in as a maintainer, you can see obsolete and
+                    unpublished plans.
+                </p>
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-3 col-sm-12">
+                            <label class="form-label" i18n>Plan</label>
+                        </div>
+                        <div class="col-9 col-sm-12">
+                            <div class="input-group">
+                                <select class="form-select"
+                                        [(ngModel)]="_selectedName"
+                                        (ngModelChange)="_nameChanged()">
+                                    <option [value]="null" disabled i18n>Select a plan...</option>
+                                    <option *ngFor="let name of _names" [value]="name">
+                                        {{name}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group" *ngIf="_selectedName && _versionsOfPlan(_selectedName).length > 1">
+                        <div class="col-3 col-sm-12">
+                            <label class="form-label" i18n>Version</label>
+                        </div>
+                        <div class="col-9 col-sm-12">
+                            <div class="input-group">
+                                <select class="form-select" [(ngModel)]="_selectedVersion">
+                                    <option [value]="null" disabled i18n>Select a plan version...</option>
+                                    <option *ngFor="let version of _versionsOfPlan(_selectedName)" [value]="version">
+                                        {{version}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-3 col-sm-12">
+                            <label class="form-label" i18n>Start semester</label>
+                        </div>
+                        <div class="col-9 col-sm-12">
+                            <vp-semester-input [(semester)]="_startSemester" [allowedTerms]="_allowedTerms()"></vp-semester-input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary"
+                    [disabled]="!_selectedName || !_selectedVersion || _adding"
+                    (click)="_add()">
+                <i class="btn-icon icon"
+                   [class.icon-plus]="!_adding"
+                   [class.icon-refresh]="_adding"
+                   [class.loading-spinner]="_adding"></i>
+                <ng-container i18n>Add</ng-container>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+<th class="top-filler hide-responsive"></th>
+<th *ngFor="let entry of layoutLine"
+    [colSpan]="entry.end - entry.start + 1">
+    <div [class.filled-bar]="entry.plan != undefined"
+         [class.empty-bar]="entry.plan == undefined"
+         [class.highlight]="entry.plan && _logic.planIsHighlighted(entry.plan)"
+         (mouseenter)="_highlightPlan(entry.plan)"
+         (mouseleave)="_resetHighlight()">
+        <span class="plan-name">
+            {{this._loc.select(entry.plan?.name)}}
+        </span>
+    </div>
+</th>
+<th colspan="100"></th>

@@ -1,0 +1,187 @@
+<div class="modal modal-custom-size"
+     [class.active]="_visible && !_confirmPublish && !_confirmAdd && !_confirmUpdate && !_confirmDelete"
+     (keyup.escape)="close()"
+     tabindex="0">
+    <a (click)="close()" class="href modal-overlay" aria-label="Close"></a>
+    <div class="modal-container">
+        <div class="modal-header">
+            <a class="href btn btn-clear float-right" aria-label="Close" (click)="close()"></a>
+            <span class="modal-title h5" i18n>Manage base plans</span>
+        </div>
+        <div class="modal-body">
+            <div class="content">
+                <p i18n>This window allows you to change the base plans of the curriculum planner.
+                    <span class="emph">Be aware that all changes made to the base plans affect all users.</span>
+                </p>
+                <select class="form-select" [(ngModel)]="_selectedPlan">
+                    <option disabled [ngValue]="null" i18n>Select a plan...</option>
+                    <option *ngFor="let plan of _manager.allPlans" [ngValue]="plan">
+                        {{_loc.select(plan.name)}}
+                    </option>
+                </select>
+                <div *ngIf="_selectedPlan" class="actions">
+                    <ng-container *ngIf="!_selectedPlan.published">
+                        <button class="btn btn-link btn-lg" (click)="_confirmPublish = true">
+                            <i class="icon btn-icon icon-share"></i> <ng-container i18n>Publish this plan</ng-container>
+                        </button>
+                        <p class="explanation" i18n>Publish the selected plan {{_loc.select(_selectedPlan.name)}} so it becomes available to
+                            the user. <span class="emph">Plans can not be deleted once they are published.</span>
+                        </p>
+                    </ng-container>
+                    <button class="btn btn-link btn-lg" (click)="_confirmAdd  = true">
+                        <i class="icon btn-icon icon-plus"></i>
+                        <ng-container i18n>Upload the selected plan as a new base plan</ng-container>
+                    </button>
+                    <p class="explanation" i18n>Upload your selected local plan {{_loc.select(_selectedPlan.name)}} as a new base plan with a
+                        new ID which you can choose in the next step. Note that you have to publish the plan in a second
+                        step before it is available to the user.
+                    </p>
+                    <div *ngIf="!templateSelected()">
+                        <button class="btn btn-link btn-lg" (click)="_confirmUpdate = true">
+                            <i class="icon btn-icon icon-upload"></i>
+                            <ng-container i18n>Update the base plan of the selected plan</ng-container>
+                        </button>
+                        <p class="explanation" i18n>Upload your changes made to the plan {{_loc.select(_selectedPlan.name)}} and apply them to the
+                            existing base plan (with the ID <span class="id">{{_selectedPlan._id}}</span>). Consider creating
+                            a new version instead before updating existing base plans; changing existing base plans should
+                            only be done e.g. to fix mistakes in the respective base plan.
+                        </p>
+                        <ng-container *ngIf="!_selectedPlan.published">
+                            <button class="btn btn-link btn-lg" (click)="_confirmDelete = true">
+                                <i class="icon btn-icon icon-delete"></i>
+                                <ng-container i18n>Delete the base plan of the selected plan</ng-container>
+                            </button>
+                            <p class="explanation" i18n>Deletes the base plan (with the ID <span class="id">{{_selectedPlan._id}}</span>) of the
+                                selected local plan. <span class="emph">Only unpublished plans can be deleted.</span>
+                            </p>
+                        </ng-container>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="_selectedPlan" class="modal modal-custom-size"
+     [class.active]="_confirmPublish && _visible"
+     (keyup.escape)="close()"
+     tabindex="0">
+    <a (click)="close()" class="href modal-overlay" aria-label="Close"></a>
+    <div class="modal-container">
+        <div class="modal-header">
+            <a class="href btn btn-clear float-right" aria-label="Close" (click)="close()"></a>
+            <span class="modal-title h5" i18n>Confirm action</span>
+        </div>
+        <div class="modal-body">
+            <div class="content">
+                <p i18n>You are about to <span class="emph">publish the plan with the ID</span>&nbsp;
+                    <span class="id">{{_selectedPlan._id}}</span>, the name&nbsp;
+                    <span class="emph">{{_loc.select(_selectedPlan.name)}}</span> and version&nbsp;
+                    <span class="emph">{{_selectedPlan.version}}</span>. Other changes you made will also take effect;
+                    make sure the plan is correct. <span class="emph">If you publish this plan, you will not be able to
+                    delete it anymore.</span>
+                </p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-lg btn-wide btn-primary" (click)="_publish()" [disabled]="_waitingForReload">
+                <ng-container i18n>Confirm publishing</ng-container>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="_selectedPlan" class="modal modal-custom-size"
+     [class.active]="_confirmAdd && _visible"
+     (keyup.escape)="close()"
+     tabindex="0">
+    <a (click)="close()" class="href modal-overlay" aria-label="Close"></a>
+    <div class="modal-container">
+        <div class="modal-header">
+            <a class="href btn btn-clear float-right" aria-label="Close" (click)="close()"></a>
+            <span class="modal-title h5" i18n>Confirm action</span>
+        </div>
+        <div class="modal-body">
+            <div class="content">
+                <p i18n>You are about to <span class="emph">create a new base plan</span> with the name&nbsp;
+                    <span class="emph">{{_loc.select(_selectedPlan.name)}}</span> and version&nbsp;
+                    <span class="emph">{{_selectedPlan.version}}</span>. Make sure the plan is correct and enter the
+                    new unique ID of the new base plan below before confirming this action.
+                </p>
+                <p i18n>Note that the plan does not become available immediately. You have to publish it as a second step
+                    before the user can use this new plan.
+                </p>
+                <input type="text"
+                       class="form-input"
+                       [class.is-error]="!_validId()"
+                       placeholder="new unique ID" i18n-placeholder
+                       [(ngModel)]="_newId">
+                <input type="text"
+                       class="form-input"
+                       [class.is-error]="!_validId()"
+                       placeholder="repeat the ID" i18n-placeholder
+                       [(ngModel)]="_newIdConfirm">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-lg btn-wide btn-success" [disabled]="!_validId() || _waitingForReload" (click)="_add()">
+                <ng-container i18n>Create new base plan</ng-container>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="_selectedPlan" class="modal modal-custom-size"
+     [class.active]="_confirmUpdate && _visible"
+     (keyup.escape)="close()"
+     tabindex="0">
+    <a (click)="close()" class="href modal-overlay" aria-label="Close"></a>
+    <div class="modal-container">
+        <div class="modal-header">
+            <a class="href btn btn-clear float-right" aria-label="Close" (click)="close()"></a>
+            <span class="modal-title h5" i18n>Confirm action</span>
+        </div>
+        <div class="modal-body">
+            <div class="content">
+                <p i18n>You are about to <span class="emph">update the base plan with the ID</span>&nbsp;
+                    <span class="id">{{_selectedPlan._id}}</span>, the name&nbsp;
+                    <span class="emph">{{_loc.select(_selectedPlan.name)}}</span> and version&nbsp;
+                    <span class="emph">{{_selectedPlan.version}}</span>. Make sure the plan is correct and consider
+                    creating a new version instead of updating this existing base plan.
+                </p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-lg btn-wide btn-primary" (click)="_update()" [disabled]="_waitingForReload">
+                <ng-container i18n>Confirm update</ng-container>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="_selectedPlan" class="modal modal-custom-size"
+     [class.active]="_confirmDelete && _visible"
+     (keyup.escape)="close()"
+     tabindex="0">
+    <a (click)="close()" class="href modal-overlay" aria-label="Close"></a>
+    <div class="modal-container">
+        <div class="modal-header">
+            <a class="href btn btn-clear float-right" aria-label="Close" (click)="close()"></a>
+            <span class="modal-title h5" i18n>Confirm action</span>
+        </div>
+        <div class="modal-body">
+            <div class="content">
+                <p i18n>You are about to <span class="emph">delete the base plan with the ID</span>&nbsp;
+                    <span class="id">{{_selectedPlan._id}}</span>, the name&nbsp;
+                    <span class="emph">{{_loc.select(_selectedPlan.name)}}</span> and version&nbsp;
+                    <span class="emph">{{_selectedPlan.version}}</span>.
+                </p>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-lg btn-wide btn-error" (click)="_delete()" [disabled]="_waitingForReload">
+                <ng-container i18n>Confirm deletion</ng-container>
+            </button>
+        </div>
+    </div>
+</div>

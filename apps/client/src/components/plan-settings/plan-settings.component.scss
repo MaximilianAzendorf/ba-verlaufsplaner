@@ -1,0 +1,14 @@
+@import "variables";
+
+.choice-name
+{
+    font-size: 0.8em;
+    letter-spacing: -0.02rem;
+    color: lighten($gray-color-dark, 5%);
+}
+
+.modal-body
+{
+    overflow-y: auto;
+    overflow-x: hidden;
+}

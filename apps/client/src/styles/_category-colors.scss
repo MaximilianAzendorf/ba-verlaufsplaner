@@ -1,0 +1,31 @@
+@import "mixins";
+
+$category-colors: (
+        #dc543c,
+        #5c9cd2,
+        #d2aa26,
+        #54a676,
+        #c24598,
+        #8aab3d,
+        #6b6ac8,
+        #a65fbf,
+        #a87a6c,
+        #d93c80,
+);
+
+@for $i from 0 through 99
+{
+    $color: nth($category-colors, ($i % length($category-colors)) + 1);
+    $real-color: desaturate($color, 10%);
+
+    .group-color-#{$i}:not(.not-highlighted)
+    {
+        background: $real-color;
+        border-color: darken($real-color, 4%);
+    }
+
+    .group-color-#{$i}.blink
+    {
+        @include blink-animation(group-color-#{$i}, background, $real-color, darken($real-color, 10%), 0s);
+    }
+}

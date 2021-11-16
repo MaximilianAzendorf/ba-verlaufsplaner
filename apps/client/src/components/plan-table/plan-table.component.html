@@ -1,0 +1,76 @@
+<vp-scroll-container>
+    <vp-requirements-layer #requirementsLayer></vp-requirements-layer>
+    <table *ngIf="_planManager.activePlans.length > 0"
+           [class.no-groups]="_planMeta.groups.length == 1 && _planMeta.groups[0] == null"
+           [class.dragging]="_logic.isDragging"
+           [class.hovering]="_logic.hoveredModule != undefined"
+           [class.not-hovering]="_logic.hoveredModule == undefined">
+        <thead vpPlanTableHeader></thead>
+        <tbody (mouseleave)="_mouseLeave($event)">
+            <tr *ngFor = "let group of _planMeta.groups; index as i"
+                class="colored-groups">
+
+                <!-- The group row is there to contain group labels -->
+                <td class="plan-table-group-label hide-responsive">
+                    {{_loc.select(group)}}
+                    <div *ngIf="_categoryGroupingModeActive()"
+                         class="category-meta-container">
+                        <span *ngFor="let plan of _planMeta.plansOfCategory(group)" class="category-meta">
+                            {{_loc.select(plan.name)}}
+                        </span>
+                    </div>
+                </td>
+
+                <!-- The inner table cells contain the module components for all modules of the plan -->
+                <td vpPlanTableCell *ngFor="let offset of _logic.offsets"
+                    [offset]="offset"
+                    [group]="group"
+                    [compact]="compact"></td>
+
+                <td class="last-column"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- This is shown if there are no active plans (= when the plan is empty) -->
+    <div *ngIf="_loading || _planManager.activePlans.length == 0" class="placeholder">
+        <div class="empty">
+            <div class="empty-icon">
+                <i *ngIf="_loading" class="loading-spinner icon icon-refresh"></i>
+                <i *ngIf="!_loading" class="icon icon-cross"></i>
+            </div>
+            <p class="empty-title h5">
+                <span *ngIf="_loading" i18n>Courses are loading...</span>
+                <span *ngIf="!_loading">
+                    <span i18n>No active courses.</span><br>
+                    <span *ngIf="_planManager.allPlans.length == 0">
+                        <button class="btn btn-link" (click)="_singleton.planAdd.show()">
+                            <i class="btn-icon icon icon-plus"></i>
+                            <span i18n>Add a course</span>
+                        </button>
+                    </span>
+                </span>
+            </p>
+        </div>
+    </div>
+</vp-scroll-container>
+
+<div class="req-arrow-key"
+     [class.hidden]="!_logic.hoveredModule || _planMeta.requirementsOfModule(_logic.hoveredModule).length <= 0">
+    <div>
+        <vp-requirement-arrow-svg class="key-arrow"
+                                  [id]="'key0'"
+                                  [path]="'M 0,0 C 0,0 32,0 32,0'"
+                                  [required]="true">
+        </vp-requirement-arrow-svg>
+        <span i18n>Required prerequisite</span>
+    </div>
+    <div>
+        <vp-requirement-arrow-svg class="key-arrow"
+                                  [id]="'key0'"
+                                  [path]="'M 0,0 C 0,0 32,0 32,0'"
+                                  [required]="false">
+        </vp-requirement-arrow-svg>
+        <span i18n>Recommended prerequisite</span>
+    </div>
+</div>

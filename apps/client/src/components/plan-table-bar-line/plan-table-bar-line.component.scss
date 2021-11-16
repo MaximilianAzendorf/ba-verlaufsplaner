@@ -1,0 +1,40 @@
+@import "variables";
+@import "utility";
+
+:host
+{
+    user-select: none;
+}
+
+.top-filler
+{
+    position: sticky;
+    left: 0;
+    z-index: 1000;
+    background: inherit;
+}
+
+.filled-bar
+{
+    margin: 0 4px 4px 0;
+    @extend .s-rounded;
+    background-color: $ects-background-color;
+    font-size: $font-size-smaller;
+    transition: $default-transition;
+
+    &:hover, &.highlight
+    {
+        background-color: $ects-background-color-hover;
+    }
+}
+
+.plan-name
+{
+    $spacing: 0.5rem;
+    position: sticky;
+    @media(max-width: $mobile-breakpoint) { left: $spacing; }
+    @media(min-width: $mobile-breakpoint) { left: calc(#{$plan-table-category-width} + #{$spacing}); }
+    left: $spacing;
+    right: $spacing;
+    margin: 0 $spacing 0 $spacing;
+}

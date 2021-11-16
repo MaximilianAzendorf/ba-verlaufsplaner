@@ -1,0 +1,118 @@
+<div #modal class="modal modal-custom-size"
+     [class.active]="plan && !_askForDeletion"
+     (keyup.escape)="close()"
+     (keyup.enter)="!_tableLogic.maintainerMode && _apply()"
+     tabindex="0">
+    <a (click)="close()" class="href modal-overlay" aria-label="Close"></a>
+    <div class="modal-container" *ngIf="plan">
+        <div class="modal-header">
+            <a class="href btn btn-clear float-right" aria-label="Close" (click)="close()"></a>
+            <div class="modal-title h5">
+                <ng-container i18n>Settings for <span class="text-bold">{{_loc.select(_plan.original.name)}}</span> ({{_plan.original.version}})</ng-container>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="content">
+                <div class="form-horizontal">
+
+                    <!-- Start Semester -->
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Start semester</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <vp-semester-input [(semester)]="_plan.object.startSemester"
+                                               [allowedTerms]="plan.startTerms">
+                            </vp-semester-input>
+                        </div>
+                    </div>
+
+                    <!-- Plan choices -->
+                    <div *ngIf="_getAllChoices().length > 0" class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Plan choices</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <div *ngFor="let choice of _getAllChoices()" class="input-group">
+                                <span class="input-group-addon choice-name">{{_loc.select(choice.name)}}</span>
+                                <select class="form-select" [class.is-error]="!_getActiveAlternative(choice)"
+                                        [ngModel]="_getActiveAlternative(choice)"
+                                        (ngModelChange)="_setActiveAlternative(choice, $event)"
+                                        [ngModelOptions]="{standalone: true}">
+                                    <option *ngFor="let alternative of _getAllAlternatives(choice)"
+                                            [value]="alternative[0]">
+                                        {{_loc.select(alternative[1].name)}}
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Migration -->
+                    <div class="form-group" *ngIf="plan.migratableTo">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Migrate plan</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <div class="input-group">
+                                <select class="form-select" [(ngModel)]="_migrateId">
+                                    <option [value]="null" disabled i18n>Select new base plan...</option>
+                                    <option *ngFor="let planHeader of _migratablePlanHeaders"
+                                            [value]="planHeader._id">
+                                        {{_loc.select(planHeader.name)}} ({{planHeader.version}})
+                                    </option>
+                                </select>
+                                <button class="btn input-group-btn tooltip tooltip-right"
+                                        [disabled]="!_migrateId || _isMigrating"
+                                        [class.btn-default]="!_migrateId"
+                                        [class.btn-primary]="_migrateId"
+                                        data-tooltip="Migrate to the selected base plan" i18n-data-tooltip
+                                        (click)="_migrate()">
+                                    <i class="icon"
+                                       [class.icon-arrow-right]="!_isMigrating"
+                                       [class.icon-refresh]="_isMigrating"
+                                       [class.loading-spinner]="_isMigrating">
+                                    </i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <vp-plan-maintainer-settings #maintainerSettings
+                                             *ngIf="_tableLogic.maintainerMode"
+                                             [plan]="_plan.object">
+                </vp-plan-maintainer-settings>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-error float-left" (click)="_delete()">
+                <i class="btn-icon icon icon-delete"></i> <ng-container i18n>Remove plan</ng-container>
+            </button>
+            <button class="btn btn-success" (click)="_apply()" [disabled]="!isValid()">
+                <i class="btn-icon icon icon-check"></i> <ng-container i18n>Confirm</ng-container>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="modal settings-modal" [class.active]="_askForDeletion">
+    <a (click)="close()" class="href modal-overlay" aria-label="Close"></a>
+    <div class="modal-container" *ngIf="plan">
+        <div class="modal-header">
+            <div class="modal-title h5" i18n>Are you sure?</div>
+        </div>
+        <div class="modal-body">
+            <div class="content">
+                <ng-container i18n>You are about to remove <span class="text-bold no-break">{{_loc.select(plan.name)}}</span> from your plan.</ng-container>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" (click)="_cancelDelete()">
+                <ng-container i18n>Cancel</ng-container>
+            </button>
+            <button class="btn btn-error" (click)="_confirmDelete()">
+                <i class="btn-icon icon icon-delete"></i> <ng-container i18n>Confirm removal</ng-container>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+<div class="editor" *ngIf="_authentication.isAuthenticated || _authentication.localConfirmed; else loginLanding">
+    <vp-plan-action-bar #actionBar></vp-plan-action-bar>
+    <vp-plan-table [compact]="actionBar.compact"></vp-plan-table>
+</div>
+
+<ng-template #loginLanding>
+    <div class="placeholder">
+        <div class="empty">
+            <div class="empty-title h5">
+                <p i18n>Welcome!</p>
+                <p i18n>To use this application, please <a class="href" (click)="_authentication.authenticate()">log in</a>.</p>
+                <p i18n>Alternatively, you can <a class="href" (click)="_confirmLocal()">try it out locally</a>.</p>
+            </div>
+        </div>
+    </div>
+</ng-template>

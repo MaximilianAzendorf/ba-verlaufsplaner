@@ -1,0 +1,29 @@
+@import "variables";
+
+tr
+{
+    background-color: $plan-row-odd-color;
+    min-width: 100%;
+
+    &:first-child ::ng-deep th { padding-top: 6px; }
+
+    ::ng-deep th
+    {
+        padding: 0;
+        background: inherit;
+    }
+}
+
+.table-corner
+{
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    background: $gray-color-light;
+}
+
+tr
+{
+    background: $plan-row-odd-color;
+}

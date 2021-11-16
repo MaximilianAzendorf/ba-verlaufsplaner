@@ -1,0 +1,42 @@
+@import "variables";
+
+:host
+{
+    font-family: $base-font-family;
+}
+
+.flex-container
+{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+vp-top-navbar
+{
+    flex-shrink: 0;
+}
+
+vp-plan-editor
+{
+    position: relative;
+    flex: 1 1 auto;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.error-technical, .error-stack
+{
+    color: $gray-color;
+}
+
+.error-title
+{
+    .icon
+    {
+        transform: translate(0, -2px);
+        margin-right: 0.3rem;
+    }
+}

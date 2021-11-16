@@ -1,0 +1,52 @@
+@import "category-colors";
+
+/***** Theme Overrides *****/
+$primary-color: #1773cd;
+$error-color: #e02402;
+$warning-color: #ef9900;
+
+// All other theme variables are taken with their default values
+@import "node_modules/spectre.css/src/variables";
+
+/***** Basic Variables *****/
+$mobile-breakpoint: 700px;
+$font-size-smaller: 0.8em;
+
+$default-transition-function: ease;
+$default-transition-duration: 120ms;
+$default-transition: $default-transition-duration $default-transition-function;
+
+$tooltip-delay: 350ms;
+
+$semi-gray-color: lighten($gray-color, 14%);
+
+/***** Plan-Table-Related Variables *****/
+$module-width: 8rem;
+$module-margin: 0.2rem;
+
+$not-highlighted-color: lighten($gray-color, 10%);
+$past-color: darken($gray-color, 0%);
+
+$plan-table-category-width: 12rem;
+$plan-table-header-height: 3rem;
+$plan-table-scroll-indicator-size: 16px;
+$plan-table-scroll-indicator-distance: 22px;
+$plan-table-scroll-indicator-color: transparentize($gray-color, 0.3);
+$plan-table-scroll-indicator-color-active: $primary-color;
+
+$ects-background-color: transparentize($gray-color-dark, 0.87);
+$ects-background-color-hover: adjust-color($ects-background-color, $alpha: 0.08);
+
+$plan-row-even-color: #fff;
+$plan-row-odd-color: mix($gray-color-light, $gray-color, 100%);
+
+$blocked-background-color: change-color($error-color, $alpha: 0.3);
+$blocked-background: $blocked-background-color;
+
+$past-background-color: change-color($gray-color, $alpha: 0.3);
+$past-background: $past-background-color;
+
+$requirement-ok: #008033;
+$requirement-ok-soft: $requirement-ok; //#6c6c6c;
+$requirement-warning: #ec9800;
+$requirement-error: $error-color;

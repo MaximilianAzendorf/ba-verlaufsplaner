@@ -1,0 +1,146 @@
+<div class="maintainer-options">
+    <div class="form-horizontal">
+
+        <!-- ID -->
+        <div class="form-group">
+            <div class="col-4 col-sm-12">
+                <label class="form-label" i18n>ID</label>
+            </div>
+            <div class="col-8 col-sm-12">
+                <span class="id">{{plan._id}}</span>
+            </div>
+        </div>
+
+        <!-- Name -->
+        <div class="form-group">
+            <div class="col-4 col-sm-12">
+                <label class="form-label" i18n>Name</label>
+                <vp-hint text="The name of this plan. A user cannot add two or more plans that have the same name (e.g. different versions of the same plan)." i18n-text></vp-hint>
+            </div>
+            <div class="col-8 col-sm-12">
+                <vp-localized-text-input [(locString)]="plan.name" [emptyAllowed]="false"></vp-localized-text-input>
+            </div>
+        </div>
+
+        <!-- Version -->
+        <div class="form-group">
+            <div class="col-4 col-sm-12">
+                <label class="form-label" i18n>Version</label>
+                <vp-hint text="The version usually is a year and discerns different versions of the same plan (which should share the same name)." i18n-text></vp-hint>
+            </div>
+            <div class="col-8 col-sm-12">
+                <input class="form-input"
+                       type="text" [class.is-error]="!_validVersion()"
+                       [(ngModel)]="plan.version">
+            </div>
+        </div>
+
+        <!-- Start terms -->
+        <div class="form-group">
+            <div class="col-4 col-sm-12">
+                <label class="form-label" i18n>Start terms</label>
+                <vp-hint text="In which terms this plan can be started. For example, when only the winter term is checked, users can not select a summer semester as the start semester." i18n-text></vp-hint>
+            </div>
+            <div class="col-8 col-sm-12">
+                <label class="form-checkbox" [class.is-error]="!_validStartTerms()">
+                    <input type="checkbox"
+                           [ngModel]="plan.startTerms.includes('winter')"
+                           (ngModelChange)="_setStartTerm('winter', $event)">
+                    <i class="form-icon"></i>
+                    <ng-container i18n>Winter term</ng-container>
+                </label>
+                <label class="form-checkbox" [class.is-error]="!_validStartTerms()">
+                    <input type="checkbox"
+                           [ngModel]="plan.startTerms.includes('summer')"
+                           (ngModelChange)="_setStartTerm('summer', $event)">
+                    <i class="form-icon"></i>
+                    <ng-container i18n>Summer term</ng-container>
+                </label>
+                <p *ngIf="!_validStartTerms()" class="form-input-hint is-error" i18n>A plan has to have at least one start term.</p>
+            </div>
+        </div>
+
+        <!-- Obsolete after -->
+        <div class="form-group">
+            <div class="col-4 col-sm-12">
+                <label class="form-label" i18n>Obsolete after</label>
+                <vp-hint text="If this date is set, users can not add this plan after the given date and users that already use this plan will get a warning. Consider adding migration options if you make a plan obsolete." i18n-text></vp-hint>
+            </div>
+            <div class="col-8 col-sm-12">
+                <input class="form-input" type="date" [(ngModel)]="plan.obsoleteAfter">
+            </div>
+        </div>
+
+        <!-- Migratable to -->
+        <div class="form-group">
+            <div class="col-4 col-sm-12">
+                <label class="form-label" i18n>Migratable to</label>
+                <vp-hint text="User can migrate this plan to all plans that are given here. This is usually done for plans that became obsolete because a newer version (to which the old plan sould be migrated) became available." i18n-text></vp-hint>
+            </div>
+            <div class="col-8 col-sm-12">
+                <input class="form-input"
+                       type="text"
+                       placeholder="Comma-separated list of plan IDs"
+                       i18n-placeholder
+                       [ngModel]="plan.migratableTo?.join(', ')"
+                       (ngModelChange)="_setMigratableTo($event)">
+            </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="form-group">
+            <div class="col-4 col-sm-12">
+                <label class="form-label" i18n>Categories</label>
+            </div>
+            <div class="col-8 col-sm-12">
+                <div class="accordion">
+                    <input type="checkbox" id="category-hide" name="accordion-checkbox" hidden [(ngModel)]="_categoriesShown">
+                    <label class="accordion-header" for="category-hide">
+                        <i class="icon icon-arrow-right mr-1"></i>
+                        <ng-container *ngIf="!_categoriesShown" i18n>Show and edit categories</ng-container>
+                        <ng-container *ngIf="_categoriesShown" i18n>Hide categories</ng-container>
+                    </label>
+                    <div class="accordion-body" cdkDropList>
+                        <div class="single-category"
+                             *ngFor="let category of plan.categories; let index = index"
+                             (cdkDragDropped)="_dragDropped($event)"
+                             cdkDrag>
+                            <i class="icon icon-menu drag-handle" cdkDragHandle></i>
+                            <span [innerHTML]="index + 1 | ordinal | safeHtml"></span>&nbsp;
+                            <ng-container i18n>Category</ng-container>:
+                            <a class="href icon icon-delete float-right" (click)="_deleteCategory(index)"></a>
+                            <vp-localized-text-input [(locString)]="plan.categories[index]"
+                                                     [emptyAllowed]="false">
+                            </vp-localized-text-input>
+                        </div>
+                        <button class="btn btn-sm btn-primary" (click)="_addCategory()">
+                            <i class="icon btn-icon icon-plus"></i>
+                            <ng-container i18n>Add category</ng-container>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan choices -->
+        <div class="form-group">
+            <div class="col-4 col-sm-12">
+                <label class="form-label" i18n>Plan choices</label>
+                <vp-hint text="Plan choices provide several alternatives (containing modules) from which the user has to select exactly one." i18n-text></vp-hint>
+            </div>
+            <div class="col-8 col-sm-12">
+                <div class="accordion">
+                    <input type="checkbox" id="choices-hide" name="accordion-checkbox" hidden [(ngModel)]="_choicesShown">
+                    <label class="accordion-header" for="choices-hide">
+                        <i class="icon icon-arrow-right mr-1"></i>
+                        <ng-container *ngIf="!_choicesShown" i18n>Show and edit plan choices</ng-container>
+                        <ng-container *ngIf="_choicesShown" i18n>Hide plan choices</ng-container>
+                    </label>
+                    <div class="accordion-body">
+                        <vp-plan-choices-editor #choicesEditor [plan]="plan"></vp-plan-choices-editor>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

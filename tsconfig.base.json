@@ -1,0 +1,40 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@vp/api-interfaces": [
+        "libs/api-interfaces/src/index.ts"
+      ],
+      "@vp/utility": [
+        "libs/utility/src/index.ts"
+      ]
+    },
+    "strictNullChecks": false
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": true
+  },
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
+}

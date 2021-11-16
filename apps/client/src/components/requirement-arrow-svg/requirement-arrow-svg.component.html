@@ -1,0 +1,17 @@
+<svg overflow="visible" class="requirement-arrow"
+    [class.required]="required"
+    [class.hidden]="hidden"
+    [class.violated]="violated">
+    <defs>
+        <marker [attr.id]="'m-' + id"
+                markerWidth="16"
+                markerHeight="16"
+                refX="6"
+                refY="8"
+                orient="auto"
+                markerUnits="userSpaceOnUse">
+            <path class="marker" d="M0,0 L0,16 L16,8 z"/>
+        </marker>
+    </defs>
+    <path [attr.d]="path" [attr.marker-end]="'url(#m-' + id + ')'"/>
+</svg>

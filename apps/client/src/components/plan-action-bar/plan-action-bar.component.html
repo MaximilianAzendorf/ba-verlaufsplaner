@@ -1,0 +1,77 @@
+<header class="navbar">
+    <section class="navbar-section">
+        <div *ngIf="_auth.isMaintainer"
+             class="maintainer-switch tooltip tooltip-bottom"
+             data-tooltip="You are logged in as a maintainer. In maintainer mode, you can edit module data and change or create base plans."
+             i18n-data-tooltip>
+            <label class="form-switch bar-colored">
+                <input type="checkbox" [(ngModel)]="_tableLogic.maintainerMode">
+                <i class="form-icon"></i> <ng-container i18n>Maintainer mode</ng-container>
+            </label>
+        </div>
+        <button class="btn btn-link"
+                *ngIf="_tableLogic.maintainerMode && _planManager.activePlans.length > 0"
+                (click)="_singleton.moduleAdd.show()">
+            <i class="icon btn-icon icon-plus"></i>&nbsp;
+            <ng-container i18n>Add module</ng-container>
+        </button>
+        <button class="btn btn-link"
+                *ngIf="_tableLogic.maintainerMode && _planManager.activePlans.length > 0"
+                (click)="_singleton.basePlanManager.show()">
+            <i class="icon btn-icon icon-upload"></i>&nbsp;
+            <ng-container i18n>Manage base plans</ng-container>
+        </button>
+        <div class="plan-dropdown dropdown">
+            <a class="btn btn-link bar-colored dropdown-toggle" tabindex="0" vpFocusToggle>
+                <ng-container i18n *ngIf="!compact">View: normal</ng-container>
+                <ng-container i18n *ngIf="compact">View: compact</ng-container>
+                &nbsp;<i class="icon icon-caret"></i>
+            </a>
+            <ul class="plan-menu menu">
+                <li class="menu-item">
+                    <label class="form-radio">
+                        <input type="radio" name="plan-view" [value]="false" [(ngModel)]="compact">
+                        <i class="form-icon"></i> <ng-container i18n>Normal</ng-container>
+                    </label>
+                </li>
+                <li class="menu-item">
+                    <label class="form-radio">
+                        <input type="radio" name="plan-view" [value]="true" [(ngModel)]="compact">
+                        <i class="form-icon"></i> <ng-container i18n>Compact</ng-container>
+                    </label>
+                </li>
+            </ul>
+        </div>
+        <div class="plan-dropdown dropdown">
+            <a class="btn btn-link bar-colored dropdown-toggle" tabindex="0" vpFocusToggle>
+                <span *ngIf="_planManager.getPlanGrouping() == _planGroupingModes.Category">
+                    <ng-container i18n>Grouping: categories</ng-container>
+                </span>
+                <span *ngIf="_planManager.getPlanGrouping() == _planGroupingModes.Plan">
+                    <ng-container i18n>Grouping: courses</ng-container>
+                </span>
+                &nbsp;<i class="icon icon-caret"></i>
+            </a>
+            <ul class="plan-menu menu">
+                <li class="menu-item">
+                    <label class="form-radio">
+                        <input type="radio" name="plan-grouping"
+                               [value]="_planGroupingModes.Category"
+                               [ngModel]="_planManager.getPlanGrouping()"
+                               (ngModelChange)="_planManager.setPlanGrouping($event)">
+                        <i class="form-icon"></i> <ng-container i18n>Categories</ng-container>
+                    </label>
+                </li>
+                <li class="menu-item">
+                    <label class="form-radio">
+                        <input type="radio" name="plan-grouping"
+                               [value]="_planGroupingModes.Plan"
+                               [ngModel]="_planManager.getPlanGrouping()"
+                               (ngModelChange)="_planManager.setPlanGrouping($event)">
+                        <i class="form-icon"></i> <ng-container i18n>Courses</ng-container>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </section>
+</header>

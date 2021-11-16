@@ -1,0 +1,45 @@
+@import "variables";
+
+.maintainer-options
+{
+    border-top: 1px solid $gray-color;
+    margin-top: 0.3rem;
+    padding-top: 0.3rem;
+}
+
+.single-category
+{
+    + .single-category
+    {
+        margin-top: 0.5rem;
+    }
+
+    padding: 0.2rem;
+    border-radius: $unit-1;
+    background-color: $semi-gray-color;
+}
+
+.drag-handle
+{
+    margin-right: 0.4rem;
+    color: $gray-color;
+    cursor: grab;
+}
+
+.form-label
+{
+    display: inline-block;
+    + vp-hint
+    {
+        margin-left: 0.4em;
+    }
+}
+
+.accordion-body
+{
+    transition: none;
+    input:checked ~ &
+    {
+        max-height: unset !important;
+    }
+}

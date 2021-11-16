@@ -1,0 +1,13 @@
+<div class="content">
+    <span class="tooltip tooltip-top" data-tooltip="Failed module" i18n-data-tooltip>
+        <i class="icon icon-cross"></i>
+    </span>
+    <span class="tooltip-top"
+          [class.tooltip]="_modules.get(attemptRef.moduleKey).nameShort"
+          [attr.data-tooltip]="_modules.get(attemptRef.moduleKey).name">
+        <span class="name">{{_loc.select(_modules.get(attemptRef.moduleKey).nameShort || _modules.get(attemptRef.moduleKey).name)}}</span>
+    </span>
+    <span class="delete-button" (click)="_delete()">
+        <i class="icon icon-delete" ></i>
+    </span>
+</div>

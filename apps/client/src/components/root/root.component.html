@@ -1,0 +1,38 @@
+<div class="flex-container">
+    <vp-top-navbar></vp-top-navbar>
+
+    <vp-plan-editor #planEditor></vp-plan-editor>
+
+    <div class="modal" [class.active]="_error.hasError">
+        <div class="modal-overlay" aria-label="Close"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title error-title h5">
+                    <i class="icon icon-cross"></i>
+                    <ng-container i18n>There was an error</ng-container>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                    <p>
+                        <ng-container i18n>Reason: {{_error.reason || "no reason"}}</ng-container>
+                        <span *ngIf="_error.technicalReason" class="error-technical">({{_error.technicalReason}})</span>
+                    </p>
+                    <p>
+                        <ng-container i18n>You may need to reload the page. If this problem persists, please report it.</ng-container>
+                    </p>
+                    <p *ngIf="!_production" class="error-stack">{{_error.stacktrace}}</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-link" (click)="_reload()" i18n>Reload page</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<vp-plan-settings #planSettings></vp-plan-settings>
+<vp-plan-add #planAdd></vp-plan-add>
+<vp-module-edit #moduleEdit></vp-module-edit>
+<vp-module-add #moduleAdd></vp-module-add>
+<vp-base-plan-manager #basePlanManager></vp-base-plan-manager>

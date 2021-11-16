@@ -1,0 +1,86 @@
+@import "variables";
+
+:host
+{
+    $top-bottom-margin: 0.45rem;
+
+    display: flex;
+    width: 100%;
+    overflow: visible;
+    user-select: none;
+
+    .content
+    {
+        display: block;
+        width: 100%;
+    }
+
+    opacity: 0;
+    max-height: 0;
+    margin: 0 0 0 0.2rem;
+
+    :host-context(table:not(.dragging) .past) .cell-container:hover > &,
+    &.visible
+    {
+        opacity: 1;
+        max-height: 1rem;
+
+        &:first-of-type
+        {
+            margin-top: $top-bottom-margin;
+        }
+        &:last-of-type
+        {
+            margin-bottom: $top-bottom-margin;
+        }
+    }
+
+    transition: opacity $default-transition, margin $default-transition, max-height $default-transition;
+
+    font-size: $font-size-sm;
+    color: darken($gray-color, 3%);
+}
+
+.name
+{
+    display: inline-block;
+    max-width: calc(#{$module-width} - 2rem);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.delete-button
+{
+    cursor: pointer;
+    &:hover
+    {
+        color: $gray-color-dark;
+    }
+}
+
+.icon-cross
+{
+    margin-right: 0.2rem;
+    transform: translate(0, -0.29rem);
+}
+
+.icon-delete
+{
+    transform: translate(0, 4px);
+    float: right;
+    margin-right: 0.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0s;
+
+    :host:hover &
+    {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 500ms;
+    }
+
+    transition: opacity $default-transition, visibility $default-transition;
+}

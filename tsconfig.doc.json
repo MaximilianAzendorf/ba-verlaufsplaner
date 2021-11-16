@@ -1,0 +1,14 @@
+{
+  "include": [
+    "apps/api/**/*.ts",
+    "apps/client/**/*.ts",
+    "libs/**/*.ts",
+  ],
+  "exclude": [
+    "**/main.ts",
+    "**/test-setup.ts",
+    "**/_*.ts",
+    "**/*.spec.ts",
+    "**/environments/*.ts"
+  ]
+}

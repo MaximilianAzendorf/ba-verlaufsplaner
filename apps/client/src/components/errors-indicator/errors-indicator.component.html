@@ -1,0 +1,12 @@
+<span *ngIf="_errorCount() > 0">
+    <vp-module-badge [type]="'error'"></vp-module-badge>
+    <span class="count error-count">&times;{{_errorCount()}}</span>
+</span>
+<span *ngIf="_warningCount() > 0">
+    <vp-module-badge [type]="'warning'"></vp-module-badge>
+    <span class="count warning-count">&times;{{_warningCount()}}</span>
+</span>
+<span *ngIf="_questionCount() > 0">
+    <vp-module-badge [type]="'question'"></vp-module-badge>
+    <span class="count question-count">&times;{{_questionCount()}}</span>
+</span>

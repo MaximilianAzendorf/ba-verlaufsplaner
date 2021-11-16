@@ -1,0 +1,27 @@
+@import "variables";
+
+.choice
+{
+    padding: 0.2rem;
+    border-radius: $unit-1;
+    background-color: $semi-gray-color;
+    margin-bottom: 0.5rem;
+}
+
+.form-input-hint
+{
+    color: $error-color;
+}
+
+.alternative
+{
+    padding: 0.2rem;
+    border-radius: $unit-1;
+    background-color: transparentize(black, 0.9);
+    margin-bottom: 0.3rem;
+}
+
+.alternative-add, .alternative
+{
+    margin-left: 0.5rem;
+}

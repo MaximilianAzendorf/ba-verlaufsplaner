@@ -1,0 +1,130 @@
+@import "variables";
+
+:host
+{
+    font-weight: unset;
+    padding: 0;
+    height: $plan-table-header-height;
+
+    &:hover { z-index: 10; }
+    background: $plan-row-odd-color;
+    overflow: visible;
+}
+
+.inner
+{
+    padding: 0.3rem $module-margin 0.6rem;
+    transition: background-color $default-transition, border-radius $default-transition-duration steps(1, end);
+}
+
+.inner:not(.past).blocked
+{
+    background: $blocked-background;
+    transition: background-color $default-transition, border-radius 0s;
+
+    &.left-end
+    {
+        border-top-left-radius: $border-radius;
+    }
+
+    &.right-end
+    {
+        border-top-right-radius: $border-radius;
+    }
+}
+
+.inner.past
+{
+    background: $past-background;
+    color: $gray-color-dark;
+
+    &.left-end
+    {
+        border-top-left-radius: $border-radius;
+    }
+
+    &.right-end
+    {
+        border-top-right-radius: $border-radius;
+    }
+}
+
+.left
+{
+    display: inline-block;
+    float: left;
+    text-align: left;
+
+    line-height: 1.35em;
+
+    .past &
+    {
+        font-style: italic;
+    }
+
+    .ordinal
+    {
+        display: block;
+        font-weight: bold;
+        .past &
+        {
+            font-weight: normal;
+        }
+    }
+
+    .name
+    {
+    }
+}
+
+.right
+{
+    display: inline-block;
+    float: right;
+    vertical-align: center;
+
+    .ects
+    {
+        background: $ects-background-color;
+        .past & { background: none; }
+        overflow: visible;
+        float: right;
+        position: relative;
+    }
+}
+
+@mixin ects-change-animation($dir, $color, $base-color)
+{
+    animation: ects-change-#{$dir} 2s cubic-bezier(.24,.01,.46,1);
+    @keyframes ects-change-#{$dir}
+    {
+        0%   { background-color: mix($color, $base-color, 30%); }
+        100% { background-color: $base-color; }
+    }
+}
+
+
+.inner:not(.past) .ects
+{
+    &.went-up
+    {
+        @include ects-change-animation(up, lighten($success-color, 6%), $ects-background-color);
+    }
+    &.went-down
+    {
+        @include ects-change-animation(down, lighten($error-color, 9%), $ects-background-color);
+    }
+}
+
+.inner.past .ects
+{
+    &.went-up
+    {
+        @include ects-change-animation(up-past, lighten($success-color, 6%), transparent);
+    }
+    &.went-down
+    {
+        @include ects-change-animation(down-past, lighten($error-color, 9%), transparent);
+    }
+}
+

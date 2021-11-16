@@ -1,0 +1,19 @@
+<div class="module-badge"
+     [class.error-badge]="type == 'error'"
+     [class.warning-badge]="type == 'warning'"
+     [class.passed-question-badge]="type == 'question'"
+     [class.passed-badge]="type == 'passed'"
+     [class.prepone-badge]="type == 'prepone'"
+     [class.edit-badge]="type == 'edit'">
+    <span *ngIf="type == 'error'" class="jam jam-close"></span>
+    <span *ngIf="type == 'warning'" class="text">!</span>
+    <span *ngIf="type == 'question'" class="text">?</span>
+    <span *ngIf="type == 'passed'" class="jam jam-check"></span>
+    <span *ngIf="type == 'prepone'" class="prepone-indicator">
+        <i class="icon icon-arrow-left"></i>
+        <i class="icon icon-arrow-left"></i>
+    </span>
+    <span *ngIf="type == 'edit'" class="jam jam-write-f"></span>
+
+    <ng-content></ng-content>
+</div>

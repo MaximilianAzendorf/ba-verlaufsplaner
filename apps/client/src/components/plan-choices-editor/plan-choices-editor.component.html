@@ -1,0 +1,38 @@
+<div class="choice" *ngFor="let choice of _choices(); trackBy _trackFn">
+    <ng-container i18n>Choice <span class="id">{{choice[0]}}</span></ng-container>
+    <a class="href icon icon-delete float-right" (click)="_deleteChoice(choice[0])"></a>
+    <vp-localized-text-input [(locString)]="choice[1].name" [emptyAllowed]="false"></vp-localized-text-input>
+    <div class="alternative" *ngFor="let alternative of _alternatives(choice[0]); trackBy _trackFn">
+        <ng-container i18n>Alternative <span class="id">{{alternative[0]}}</span></ng-container>
+        <a class="href icon icon-delete float-right" (click)="_deleteAlternative(choice[0], alternative[0])"></a>
+        <vp-localized-text-input [(locString)]="alternative[1].name" [emptyAllowed]="false"></vp-localized-text-input>
+    </div>
+
+    <p *ngIf="_alternatives(choice[0]).length == 0" class="form-input-hint" i18n>Choices have to contain at least one alternative.</p>
+
+    <div class="input-group alternative-add">
+        <input #alternativeId
+               type="text"
+               class="form-input input-sm"
+               placeholder="New alternative ID" i18n-placeholder
+               (keyup.enter)="_addAlternative(choice[0], alternativeId)"
+               [class.is-error]="!!alternativeId.value && !_isValidAlternativeId(choice[0], alternativeId.value)">
+        <button class="btn input-group-btn btn-sm btn-primary"
+                (click)="_addAlternative(choice[0], alternativeId)">
+            <i class="icon icon-plus"></i>
+        </button>
+    </div>
+</div>
+
+<div class="input-group">
+    <input #choiceId
+           type="text"
+           class="form-input input-sm"
+           placeholder="New choice ID" i18n-placeholder
+           (keyup.enter)="_addChoice(choiceId)"
+           [class.is-error]="!!choiceId.value && !_isValidChoiceId(choiceId.value)">
+    <button class="btn input-group-btn btn-sm btn-primary"
+            (click)="_addChoice(choiceId)">
+        <i class="icon icon-plus"></i>
+    </button>
+</div>

@@ -1,0 +1,83 @@
+@import "variables";
+
+$table-padding: 0.4rem;
+
+th, td
+{
+    text-align: left;
+}
+
+table
+{
+    border-spacing: 0;
+}
+
+td:not(:last-child)
+{
+    padding: 0 15px 0 0;
+}
+
+td:first-child
+{
+    padding-left: $table-padding;
+}
+
+td:last-child
+{
+    padding-right: $table-padding;
+}
+
+th
+{
+    padding-top: $table-padding;
+}
+
+tr:last-child td
+{
+    padding-bottom: $table-padding;
+}
+
+tr:nth-child(odd)
+{
+    background-color: $gray-color-light;
+}
+
+:not(thead) > tr:hover
+{
+    background-color: darken($gray-color-light, 5%);
+}
+
+vp-module-badge
+{
+    transform: translate(0, -1px);
+}
+
+.error-action
+{
+    text-decoration: none !important;
+    display: inline-block;
+
+    &:hover
+    {
+        color: $primary-color;
+        z-index: 1000;
+    }
+
+    i
+    {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .jam
+    {
+        transform: scale(1.2);
+    }
+}
+
+.message
+{
+    max-width: 30rem;
+    width: max-content;
+    white-space: break-spaces;
+}

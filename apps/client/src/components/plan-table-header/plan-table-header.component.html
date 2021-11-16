@@ -1,0 +1,6 @@
+<tr #headerLine vpPlanTableBarLine *ngFor="let layoutLine of _barLayout.layout" [layoutLine]="layoutLine"></tr>
+<tr #headerLine>
+    <th class="table-corner hide-responsive"></th>
+    <th vpPlanTableColumnHeader *ngFor="let offset of _logic.offsets" [offset]="offset"></th>
+    <th vpPlanTableLastColumn></th>
+</tr>

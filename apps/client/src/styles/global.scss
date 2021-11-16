@@ -1,0 +1,135 @@
+@import "variables";
+@import "node_modules/spectre.css/src/spectre";
+@import "~spectre.css/dist/spectre-icons.css";
+
+@import "buttons";
+
+body
+{
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+.href
+{
+    cursor: pointer;
+}
+
+.id
+{
+    font-family: monospace;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.emph
+{
+    font-weight: bold;
+}
+
+.nudge-up
+{
+    position: relative;
+    top: -1px;
+}
+
+.cardinal
+{
+    sup
+    {
+        display: inline-block;
+        transform: translate(0, 1px);
+    }
+}
+
+.clear-float
+{
+    display: block;
+    max-height: 0;
+    clear: both;
+}
+
+.modal-custom-size .modal-container
+{
+    max-width: 560px;
+}
+
+.loading-spinner
+{
+    animation: loading-spinner 1s linear;
+    animation-iteration-count:infinite;
+
+    @keyframes loading-spinner
+    {
+        0% { transform: rotate(0); }
+        100% { transform: rotate(360deg); }
+    }
+}
+
+.menu-item
+{
+    user-select: none;
+    white-space: nowrap;
+}
+
+.placeholder
+{
+    background: $gray-color-light;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    > * { margin: auto; }
+
+    .empty-icon
+    {
+        font-size: 2em;
+    }
+}
+
+.tooltip
+{
+    &::after
+    {
+        text-overflow: unset !important;
+        z-index: 9999 !important;
+        width: max-content !important;
+        transition-delay: 0s;
+    }
+
+    &:not(.multiline)::after
+    {
+        white-space: unset !important;
+    }
+
+    &.delay:hover::after
+    {
+        transition-delay: $tooltip-delay;
+    }
+
+    &:focus::after
+    {
+        opacity: 0;
+    }
+}
+
+.btn
+{
+    & + .btn
+    {
+        margin-left: 0.2rem;
+    }
+    .btn-icon
+    {
+        margin-right: 0.2rem;
+    }
+}
+
+@media(max-width: $mobile-breakpoint)
+{
+    .hide-responsive
+    {
+        display: none;
+    }
+}

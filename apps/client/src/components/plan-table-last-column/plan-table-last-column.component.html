@@ -1,0 +1,13 @@
+<button class="btn btn-round btn-muted tooltip tooltip-bottom"
+        data-tooltip="Add semester" i18n-data-tooltip
+        (click)="_addSemester()"
+        (mousedown)="_preventDefault($event)">
+    <i class="icon icon-plus"></i>
+</button>
+<button *ngIf="_planMeta.maxOffset != _logic.maxOffset"
+        class="btn btn-round btn-error btn-muted tooltip tooltip-bottom"
+        data-tooltip="Remove semester" i18n-data-tooltip
+        (click)="_removeSemester()"
+        (mousedown)="_preventDefault($event)">
+    <i class="icon icon-minus"></i>
+</button>

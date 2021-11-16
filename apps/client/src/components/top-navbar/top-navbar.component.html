@@ -1,0 +1,119 @@
+<header class="navbar">
+    <section class="navbar-section navbar-left">
+        <a href="/" class="navbar-brand navbar-colored navbar-optional mr-2" i18n>RWTH Curriculum Planner</a>
+        <span *ngIf="_auth.ready"
+              class="vertical-rule navbar-optional"></span>
+        <button *ngIf="_auth.ready"
+                class="btn btn-link navbar-colored undo-button tooltip tooltip-bottom navbar-optional"
+                data-tooltip="Undo" i18n-data-tooltip
+                [disabled]="!_undo.canUndo"
+                (click)="_undo.undo()">
+            <i class="icon icon-refresh"></i>
+        </button>
+        <button *ngIf="_auth.ready"
+                class="btn btn-link navbar-colored redo-button tooltip tooltip-bottom navbar-optional"
+                data-tooltip="Redo" i18n-data-tooltip
+                [disabled]="!_undo.canRedo"
+                (click)="_undo.redo()">
+            <i class="icon icon-refresh"></i>
+        </button>
+        <div *ngIf="_planProvider.isReady && _auth.ready">
+            <div class="plan-dropdown dropdown navbar-optional">
+                <a class="btn btn-link navbar-colored dropdown-toggle" tabindex="0" vpFocusToggle
+                   (click)="_planManager.allPlans.length == 0 && _singleton.planAdd.show()">
+                    {{_planDropdownLabel()}}
+                    <i class="icon icon-caret" *ngIf="_planManager.allPlans.length > 0"></i>
+                </a>
+                <ul class="plan-menu menu" *ngIf="_planManager.allPlans.length > 0">
+                    <li class="menu-item menu-heading">
+                        <ng-container i18n>Visible courses</ng-container>
+                    </li>
+                    <li class="divider"></li>
+                    <li *ngFor="let plan of _planManager.allPlans" class="menu-item">
+                        <table style="width: 100%">
+                            <tr>
+                                <td>
+                                    <label class="form-checkbox">
+                                        <input type="checkbox"
+                                               [ngModel]="_planManager.isPlanActive(plan)"
+                                               (ngModelChange)="_planManager.setPlanState(plan, $event)">
+                                        <i class="form-icon"></i>
+                                        {{_loc.select(plan.name)}}
+                                    </label>
+                                </td>
+                                <td>
+                                    <a class="href plan-settings tooltip tooltip-right"
+                                       data-tooltip="Course settings" i18n-data-tooltip
+                                       (click)="_singleton.planSettings.show(plan)">
+                                        <i class="jam jam-cog-f"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-link navbar-colored tooltip tooltip-bottom navbar-optional"
+                    data-tooltip="Add course" i18n-data-tooltip
+                    (click)="_singleton.planAdd.show()">
+                <i class="icon icon-plus"></i>
+            </button>
+            <div class="plan-dropdown dropdown" *ngIf="_planProblems.problems.length > 0">
+                <a class="btn btn-link navbar-colored dropdown-toggle" tabindex="0" vpFocusToggle>
+                    <vp-errors-indicator></vp-errors-indicator>
+                </a>
+                <div #errorHub class="menu error-hub-dropdown">
+                    <vp-errors-hub-table [problems]="_planProblems.problems"
+                                         (closeRequested)="_forceHide(errorHub)">
+                    </vp-errors-hub-table>
+                </div>
+            </div>
+            <div class="plan-dropdown dropdown" *ngIf="_planProblems.ignoredProblems.length > 0">
+                <a class="btn btn-link navbar-colored dropdown-toggle light" tabindex="0" vpFocusToggle>
+                    <ng-container i18n>Hidden Problems</ng-container>
+                </a>
+                <div class="menu error-hub-dropdown">
+                    <vp-errors-hub-table [problems]="_planProblems.ignoredProblems"></vp-errors-hub-table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="navbar-section">
+        <div class="user-dropdown dropdown dropdown-right">
+            <a class="btn btn-link navbar-colored dropdown-toggle" tabindex="0" vpFocusToggle>
+                <span *ngIf="_auth.isAuthenticated">
+                    <i class="icon icon-people space"></i>
+                    {{_auth.username}}
+                </span>
+                <span *ngIf="!_auth.isAuthenticated" class="text-italic">
+                    <ng-container i18n>Not logged in</ng-container>&nbsp;
+                </span>
+                <i class="icon icon-caret"></i>
+            </a>
+            <ul class="menu">
+                <li *ngIf="_auth.isAuthenticated" class="menu-item">
+                    <a class="href" (click)="_auth.logout()">
+                        <i class="icon icon-cross space"></i>
+                        <ng-container i18n>Log out</ng-container>
+                    </a>
+                </li>
+                <li *ngIf="!_auth.isAuthenticated" class="menu-item">
+                    <a class="href" (click)="_auth.authenticate()">
+                        <i class="icon icon-people space"></i>
+                        <ng-container i18n>Log in</ng-container>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="language-dropdown dropdown dropdown-right">
+            <a class="btn btn-link navbar-colored dropdown-toggle light" tabindex="0" vpFocusToggle>
+                {{_loc.locale | uppercase}}
+            </a>
+            <ul class="menu">
+                <li class="menu-item"><a href="../en">English</a></li>
+                <li class="menu-item"><a href="../de">Deutsch</a></li>
+            </ul>
+        </div>
+    </section>
+</header>

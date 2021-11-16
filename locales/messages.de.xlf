@@ -1,0 +1,550 @@
+<?xml version="1.0"?><xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" target-language="de" datatype="plaintext">
+    <body>
+      <trans-unit id="2318332101182654284" datatype="html">
+        <source>Failed module</source>
+        <target state="translated">Nicht bestandenes Modul</target>
+      </trans-unit><trans-unit id="3106856067768983768" datatype="html">
+        <source>no value</source>
+        <target state="translated">kein Wert</target>
+      </trans-unit><trans-unit id="2407651475340234982" datatype="html">
+        <source>Specify localizations</source>
+        <target state="translated">Mit Übersetzungen</target>
+      </trans-unit><trans-unit id="8521995066870656078" datatype="html">
+        <source>No localizations</source>
+        <target state="translated">Ohne Übersetzungen</target>
+      </trans-unit><trans-unit id="6458584368694844844" datatype="html">
+        <source>Add a module</source>
+        <target state="translated">Ein Modul hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="2573546608775800114" datatype="html">
+        <source>Module passed?</source>
+        <target state="translated">Modul bestanden?</target>
+      </trans-unit>
+      <trans-unit id="8461609631969932886" datatype="html">
+        <source>Hide</source>
+        <target state="translated">Verstecken</target>
+      </trans-unit><trans-unit id="5687997933277598393" datatype="html">
+        <source>You passed this module.</source>
+        <target state="translated">Sie haben dieses Modul bestanden.</target>
+      </trans-unit>
+      
+      
+      <trans-unit id="5775346636203685655" datatype="html">
+        <source>Undo</source>
+        <target state="translated">Rückgängig</target>
+      </trans-unit><trans-unit id="8953033926734869941" datatype="html">
+        <source>Name</source>
+        <target state="translated">Name</target>
+      </trans-unit><trans-unit id="4955497164448858090" datatype="html">
+        <source>Short name (optional)</source>
+        <target state="translated">Kurzname (optional)</target>
+      </trans-unit><trans-unit id="4334309110130696310" datatype="html">
+        <source>Extra info (optional)</source>
+        <target state="translated">Extra-Info (optional)</target>
+      </trans-unit><trans-unit id="3382250908812839732" datatype="html">
+        <source>ECTS</source>
+        <target state="translated">ECTS</target>
+      </trans-unit><trans-unit id="2760588464616756865" datatype="html">
+        <source>SWS (optional)</source>
+        <target state="translated">SWS (optional)</target>
+      </trans-unit><trans-unit id="350527517111207682" datatype="html">
+        <source>Cycle</source>
+        <target state="translated">Turnus</target>
+      </trans-unit><trans-unit id="7176240358721858552" datatype="html">
+        <source>Required ECTS (optional)</source>
+        <target state="translated">Mindest-ECTS (optional)</target>
+      </trans-unit><trans-unit id="1806667489382256324" datatype="html">
+        <source>Category</source>
+        <target state="translated">Kategorie</target>
+      </trans-unit><trans-unit id="5844464116542057968" datatype="html">
+        <source>(no category)</source>
+        <target state="translated">(keine Kategorie)</target>
+      </trans-unit><trans-unit id="8913435932896633472" datatype="html">
+        <source>Prepone allowed</source>
+        <target state="translated">Vorzug erlaubt</target>
+      </trans-unit><trans-unit id="4605864425009617908" datatype="html">
+        <source>Prerequisites</source>
+        <target state="translated">Voraussetzungen</target>
+      </trans-unit><trans-unit id="4506786004240128185" datatype="html">
+        <source>Add prerequisite</source>
+        <target state="translated">Voraussetzung hinzufügen</target>
+      </trans-unit><trans-unit id="8172572647452435846" datatype="html">
+        <source>Remove module</source>
+        <target state="translated">Modul löschen</target>
+      </trans-unit><trans-unit id="7434620807721903973" datatype="html">
+        <source>Edit this module</source>
+        <target state="translated">Dieses Modul bearbeiten</target>
+      </trans-unit><trans-unit id="895742256258998827" datatype="html">
+        <source><x id="PH"/> SWS</source>
+        <target state="translated"><x id="PH"/> SWS</target>
+      </trans-unit>
+      <trans-unit id="4507011928867073540" datatype="html">
+        <source>Preponed module</source>
+        <target state="translated">Vorgezogenes Modul</target>
+      </trans-unit><trans-unit id="9027611501639699783" datatype="html">
+        <source>You are logged in as a maintainer. In maintainer mode, you can edit module data and change or create base plans.</source>
+        <target state="translated">Sie sind als Maintainer eingeloggt. Im Maintainer-Modus können Module editiert und Basispläne erstellt oder verändert werden.</target>
+      </trans-unit>
+      <trans-unit id="3080483882937310852" datatype="html">
+        <source>Normal</source>
+        <target state="translated">Normal</target>
+      </trans-unit>
+      <trans-unit id="4046649033157042513" datatype="html">
+        <source>Compact</source>
+        <target state="translated">Kompakt</target>
+      </trans-unit>
+      <trans-unit id="1902100407096396858" datatype="html">
+        <source>Categories</source>
+        <target state="translated">Kategorien</target>
+      </trans-unit>
+      <trans-unit id="1368388923673520351" datatype="html">
+        <source>Courses</source>
+        <target state="translated">Studiengänge</target>
+      </trans-unit><trans-unit id="1456143468495610262" datatype="html">
+        <source>Maintainer mode</source>
+        <target state="translated">Maintainer-Modus</target>
+      </trans-unit><trans-unit id="5589685220261492197" datatype="html">
+        <source>Add module</source>
+        <target state="translated">Modul hinzufügen</target>
+      </trans-unit><trans-unit id="1147233132309443190" datatype="html">
+        <source>Manage base plans</source>
+        <target state="translated">Basispläne verwalten</target>
+      </trans-unit><trans-unit id="7694544117693915935" datatype="html">
+        <source>This window allows you to change the base plans of the curriculum planner. <x id="START_TAG_SPAN"/>Be aware that all changes made to the base plans affect all users.<x id="CLOSE_TAG_SPAN"/></source>
+        <target state="translated">Dieses Fenster ermöglicht das Ändern und Erstellen von Basisplänen des Planungstools. <x id="START_TAG_SPAN"/>Achtung: Änderungen an den Basisplänen betreffen alle Benutzer.<x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit>
+      <trans-unit id="3937492120558266832" datatype="html">
+        <source>View: normal</source>
+        <target state="translated">Ansicht: Normal</target>
+      </trans-unit>
+      <trans-unit id="3792814067378973663" datatype="html">
+        <source>View: compact</source>
+        <target state="translated">Ansicht: Kompakt</target>
+      </trans-unit><trans-unit id="4470319183319286245" datatype="html">
+        <source>Grouping: categories</source>
+        <target state="translated">Gruppierung: Kategorien</target>
+      </trans-unit><trans-unit id="7127117054244889732" datatype="html">
+        <source>Grouping: courses</source>
+        <target state="translated">Gruppierung: Studiengänge</target>
+      </trans-unit>
+      
+      
+      <trans-unit id="3557733108342185886" datatype="html">
+        <source>Add a course</source>
+        <target state="translated">Einen Studiengang hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="5605123772636494177" datatype="html">
+        <source>Plan</source>
+        <target state="translated">Plan</target>
+      </trans-unit><trans-unit id="2070824308277208204" datatype="html">
+        <source>Subplan</source>
+        <target state="translated">Sub-Plan</target>
+      </trans-unit><trans-unit id="4420669548751889539" datatype="html">
+        <source>No subplan</source>
+        <target state="translated">Kein Sub-Plan</target>
+      </trans-unit><trans-unit id="5654179184302926700" datatype="html">
+        <source>Module ID</source>
+        <target state="translated">Modul-ID</target>
+      </trans-unit><trans-unit id="6301017670594282438" datatype="html">
+        <source>The module ID must not be empty, unique to the plan and has to start with a letter.</source>
+        <target state="translated">Die Modul-ID darf nicht leer sein, muss innerhalb des Plans einzigartig sein und muss mit einem Buchstaben beginnen.</target>
+      </trans-unit>
+      <trans-unit id="8659171803005863162" datatype="html">
+        <source>Select a plan...</source>
+        <target state="translated">Einen Plan auswählen...</target>
+      </trans-unit><trans-unit id="5668758872097136654" datatype="html">
+        <source>Upload the selected plan as a new base plan</source>
+        <target state="translated">Den lokalen Plan als neuen Basisplan hochladen</target>
+      </trans-unit><trans-unit id="7351069755973241663" datatype="html">
+        <source>Upload your selected local plan <x id="INTERPOLATION"/> as a new base plan with a new ID which you can choose in the next step. Note that you have to publish the plan in a second step before it is available to the user. </source>
+        <target state="translated">Lädt den lokalen Plan <x id="INTERPOLATION"/> als einen neuen Basisplan hoch; Sie müssen dafür eine neue, eindeutige Plan-ID wählen. Dadurch wird der neue Plan noch nicht benutzbar; Sie müssen den so erstellten Plan in einem zweiten Schritt veröffentlichen, damit er vom Benutzer verwendet werden kann. </target>
+      </trans-unit><trans-unit id="2966460404634779981" datatype="html">
+        <source>Publish this plan</source>
+        <target state="translated">Diesen Plan veröffentlichen</target>
+      </trans-unit><trans-unit id="1449613536602201347" datatype="html">
+        <source>Publish the selected plan <x id="INTERPOLATION"/> so it becomes available to the user. <x id="START_TAG_SPAN"/>Plans can not be deleted once they are published.<x id="CLOSE_TAG_SPAN"/></source>
+        <target state="translated">Veröffentlicht den ausgewählten Plan <x id="INTERPOLATION"/>, sodass er für die Benutzer verwendbar wird. <x id="START_TAG_SPAN"/>Pläne, die einmal veröffentlicht wurden, können nicht mehr gelöscht werden.<x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit><trans-unit id="2224750339191342461" datatype="html">
+        <source>Update the base plan of the selected plan</source>
+        <target state="translated">Änderungen auf den Basisplan anwenden</target>
+      </trans-unit><trans-unit id="2114504508178836300" datatype="html">
+        <source>Upload your changes made to the plan <x id="INTERPOLATION"/> and apply them to the existing base plan (with the ID <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/>). Consider creating a new version instead before updating existing base plans; changing existing base plans should only be done e.g. to fix mistakes in the respective base plan. </source>
+        <target state="translated">Lädt Ihre Änderungen am Plan <x id="INTERPOLATION"/> hoch und wendet sie auf den Basisplan (mit der ID <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/>) an. Erwägen Sie stattdessen die Erstellung einer neuen Version; Änderungen an existierenden Basisplänen sollten nur aufgrund von Fehlern o.ä. vorgenommen werden. </target>
+      </trans-unit><trans-unit id="4153035303743345019" datatype="html">
+        <source>Delete the base plan of the selected plan</source>
+        <target state="translated">Den Basisplan des ausgewählten Plans löschen</target>
+      </trans-unit><trans-unit id="6281580115070222242" datatype="html">
+        <source>Deletes the base plan (with the ID <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>) of the selected local plan. <x id="START_TAG_SPAN_1"/>Only unpublished plans can be deleted.<x id="CLOSE_TAG_SPAN"/></source>
+        <target state="translated">Löscht den Basisplan (mit der ID <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>) des ausgewählten lokalen Planes. <x id="START_TAG_SPAN_1"/>Nur unveröffentlichte Pläne können gelöscht werden.<x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit><trans-unit id="1436490309459525500" datatype="html">
+        <source>Confirm action</source>
+        <target state="translated">Aktion bestätigen</target>
+      </trans-unit><trans-unit id="3066726599042289689" datatype="html">
+        <source>You are about to <x id="START_TAG_SPAN"/>publish the plan with the ID<x id="CLOSE_TAG_SPAN"/>  <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. Other changes you made will also take effect; make sure the plan is correct. <x id="START_TAG_SPAN"/>If you publish this plan, you will not be able to delete it anymore.<x id="CLOSE_TAG_SPAN"/></source>
+        <target state="translated">Sie sind dabei <x id="START_TAG_SPAN"/>einen Plan zu veröffentlichen.<x id="CLOSE_TAG_SPAN"/>  ID <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, Name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> und Version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. Änderungen, die Sie am Plan gemacht haben, werden ebenfalls übernommen; überprüfen Sie, ob der Plan korrekt ist. <x id="START_TAG_SPAN"/>Wenn Sie diesen Plan veröffentlichen kann er nicht mehr gelöscht werden.<x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit><trans-unit id="1431806685633129547" datatype="html">
+        <source>Confirm publishing</source>
+        <target state="translated">Veröffentlichung bestätigen</target>
+      </trans-unit><trans-unit id="1828278875991576032" datatype="html">
+        <source>You are about to <x id="START_TAG_SPAN"/>create a new base plan<x id="CLOSE_TAG_SPAN"/> with the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/>. Make sure the plan is correct and enter the new unique ID of the new base plan below before confirming this action. </source>
+        <target state="translated">Sie sind dabei <x id="START_TAG_SPAN"/>einen neuen Basisplan<x id="CLOSE_TAG_SPAN"/> mit Namen  <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> and Version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> zu erstellen. Überprüfen Sie die Korrektheit des Plans und vergeben Sie eine neue, eindeutige ID bevor Sie diese Aktion bestätigen. </target>
+      </trans-unit><trans-unit id="5317200745895121293" datatype="html">
+        <source>Note that the plan does not become available immediately. You have to publish it as a second step before the user can use this new plan. </source>
+        <target state="translated">Beachten Sie, dass der Plan dadurch noch nicht benutzbar wird. Der Plan muss in einem zweiten Schritt veröffentlicht werden, damit Benutzer diesen benutzen können. </target>
+      </trans-unit><trans-unit id="2271779522219749317" datatype="html">
+        <source>new unique ID</source>
+        <target state="translated">Neue eindeutige ID</target>
+      </trans-unit><trans-unit id="443126599233689211" datatype="html">
+        <source>repeat the ID</source>
+        <target state="translated">Die ID wiederholen</target>
+      </trans-unit><trans-unit id="2225018988022692732" datatype="html">
+        <source>Create new base plan</source>
+        <target state="translated">Neuen Basisplan erstellen</target>
+      </trans-unit><trans-unit id="7710195820874574475" datatype="html">
+        <source>You are about to <x id="START_TAG_SPAN"/>update the base plan with the ID<x id="CLOSE_TAG_SPAN"/>  <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. Make sure the plan is correct and consider creating a new version instead of updating this existing base plan. </source>
+        <target state="translated">Sie sind dabei, <x id="START_TAG_SPAN"/>einen Basisplan zu ändern.<x id="CLOSE_TAG_SPAN"/>  ID <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, Name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> und Version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. Überprüfen Sie die Korrektheit des Plans und ziehen Sie stattdessen das Erstellen einer neuen Version in Erwägung. </target>
+      </trans-unit><trans-unit id="2636341142529824389" datatype="html">
+        <source>Confirm update</source>
+        <target state="translated">Änderung bestätigen</target>
+      </trans-unit><trans-unit id="3033507790350750102" datatype="html">
+        <source>You are about to <x id="START_TAG_SPAN"/>delete the base plan with the ID<x id="CLOSE_TAG_SPAN"/>  <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, the name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> and version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. </source>
+        <target state="translated">Sie sind dabei <x id="START_TAG_SPAN"/>einen Basisplan zu löschen.<x id="CLOSE_TAG_SPAN"/>  ID <x id="START_TAG_SPAN_1"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/>, Name  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_1"/><x id="CLOSE_TAG_SPAN"/> und Version  <x id="START_TAG_SPAN"/><x id="INTERPOLATION_2"/><x id="CLOSE_TAG_SPAN"/>. </target>
+      </trans-unit><trans-unit id="2470622418239063097" datatype="html">
+        <source>Confirm deletion</source>
+        <target state="translated">Löschen bestätigen</target>
+      </trans-unit>
+      <trans-unit id="4156022415020826776" datatype="html">
+        <source>Start semester</source>
+        <target state="translated">Startsemester</target>
+      </trans-unit>
+      <trans-unit id="3249513483374643425" datatype="html">
+        <source>Add</source>
+        <target state="translated">Hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="3894950702316166331" datatype="html">
+        <source>Loading...</source>
+        <target state="translated">Lade...</target>
+      </trans-unit><trans-unit id="3687661447330305450" datatype="html">
+        <source>Because you are logged in as a maintainer, you can see obsolete and unpublished plans. </source>
+        <target state="translated">Sie sind als Maintainer eingeloggt und können deshalb obsolete und unveröffentlichte Pläne sehen.</target>
+      </trans-unit>
+      <trans-unit id="2724055831234181057" datatype="html">
+        <source>Version</source>
+        <target state="translated">Version</target>
+      </trans-unit>
+      <trans-unit id="6425069776691743707" datatype="html">
+        <source>Select a plan version...</source>
+        <target state="translated">Eine Version auswählen...</target>
+      </trans-unit><trans-unit id="7157622747114370352" datatype="html">
+        <source>New choice ID</source>
+        <target state="translated">Neue Wahlmöglichkeits-ID</target>
+      </trans-unit><trans-unit id="6845504067523246039" datatype="html">
+        <source>Choice <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/></source>
+        <target state="translated">Wahlmöglichkeit <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit><trans-unit id="6937940812113997206" datatype="html">
+        <source>New alternative ID</source>
+        <target state="translated">Neue Alternativen-ID</target>
+      </trans-unit><trans-unit id="4266780979356545847" datatype="html">
+        <source>Alternative <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/></source>
+        <target state="translated">Alternative <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/></target>
+      </trans-unit><trans-unit id="3986933774099948" datatype="html">
+        <source>Choices have to contain at least one alternative.</source>
+        <target state="translated">Wahlmöglichkeiten müssen mindestens eine Alternative enthalten.</target>
+      </trans-unit>
+      <trans-unit id="5890833044137447416" datatype="html">
+        <source>Welcome!</source>
+        <target state="translated">Wilkommen!</target>
+      </trans-unit>
+      <trans-unit id="37775289117013847" datatype="html">
+        <source>To use this application, please <x id="START_LINK"/>log in<x id="CLOSE_LINK"/>.</source>
+        <target state="translated">Um diese Applikation zu benutzen müssen Sie sich <x id="START_LINK"/>einloggen<x id="CLOSE_LINK"/>.</target>
+      </trans-unit>
+      <trans-unit id="7166370333156491993" datatype="html">
+        <source>Alternatively, you can <x id="START_LINK"/>try it out locally<x id="CLOSE_LINK"/>.</source>
+        <target state="translated">Alternativ können Sie die Applikation <x id="START_LINK"/>lokal testen<x id="CLOSE_LINK"/>.</target>
+      </trans-unit><trans-unit id="8040881171107393560" datatype="html">
+        <source>ID</source>
+        <target state="translated">ID</target>
+      </trans-unit><trans-unit id="7899727865734842917" datatype="html">
+        <source>The name of this plan. A user cannot add two or more plans that have the same name (e.g. different versions of the same plan).</source>
+        <target state="translated">Der Name dieses Plans. Ein Benutzer kann nicht zwei oder mehr Pläne mit dem selben Namen (z.B. verschiedene Versionen des selben Studiengangs) zu seinem Konto hinzufügen.</target>
+      </trans-unit><trans-unit id="428306601287005211" datatype="html">
+        <source>The version usually is a year and discerns different versions of the same plan (which should share the same name).</source>
+        <target state="translated">Die Version ist in der Regel eine Jahreszahl und unterscheidet verschiedene Versionen des selben Studiengangs (die den selben Namen haben sollten).</target>
+      </trans-unit><trans-unit id="2587448794069804317" datatype="html">
+        <source>Start terms</source>
+        <target state="translated">Mögliche Startsemester</target>
+      </trans-unit><trans-unit id="5818211947850652943" datatype="html">
+        <source>In which terms this plan can be started. For example, when only the winter term is checked, users can not select a summer semester as the start semester.</source>
+        <target state="translated">In welchen Semestern der Plan gestartet werden kann. Beispielsweise können Nutzer bei einem Plan, der hier nur das Wintersemester angegeben hat, keine Sommersemester als Startsemester auswählen.</target>
+      </trans-unit><trans-unit id="7369921822977518344" datatype="html">
+        <source>Settings for <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> (<x id="INTERPOLATION_1"/>)</source>
+        <target state="translated">Einstellungen für <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> (<x id="INTERPOLATION_1"/>)</target>
+      </trans-unit>
+      <trans-unit id="7026108419792473073" datatype="html">
+        <source>Migrate plan</source>
+        <target state="translated">Plan migrieren</target>
+      </trans-unit><trans-unit id="7302514038065326571" datatype="html">
+        <source>Select new base plan...</source>
+        <target state="translated">Einen neuen Basisplan auswählen...</target>
+      </trans-unit><trans-unit id="125952531392026893" datatype="html">
+        <source>Migrate to the selected base plan</source>
+        <target state="translated">Zum ausgewählten Basisplan migrieren</target>
+      </trans-unit>
+      <trans-unit id="8688442715973149252" datatype="html">
+        <source>Remove plan</source>
+        <target state="translated">Studiengang entfernen</target>
+      </trans-unit>
+      <trans-unit id="2159130950882492111" datatype="html">
+        <source>Cancel</source>
+        <target state="translated">Abbrechen</target>
+      </trans-unit>
+      <trans-unit id="9178182467454450952" datatype="html">
+        <source>Confirm</source>
+        <target state="translated">Bestätigen</target>
+      </trans-unit><trans-unit id="4357663034852433328" datatype="html">
+        <source>Properties of <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/><x id="START_TAG_SPAN_1"/>new plan<x id="CLOSE_TAG_SPAN"/> (<x id="INTERPOLATION_1"/>) </source>
+        <target state="translated">Eigenschaften von <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/><x id="START_TAG_SPAN_1"/>neuem Plan<x id="CLOSE_TAG_SPAN"/> (<x id="INTERPOLATION_1"/>) </target>
+      </trans-unit><trans-unit id="7045123878111147511" datatype="html">
+        <source>Required</source>
+        <target state="translated">Pflicht</target>
+      </trans-unit><trans-unit id="4814285799071780083" datatype="html">
+        <source>Remove</source>
+        <target state="translated">Löschen</target>
+      </trans-unit><trans-unit id="6286037250766429054" datatype="html">
+        <source>yes</source>
+        <target state="translated">ja</target>
+      </trans-unit><trans-unit id="2420525563530770652" datatype="html">
+        <source>no</source>
+        <target state="translated">nein</target>
+      </trans-unit><trans-unit id="7351152234189377117" datatype="html">
+        <source>Plan choices</source>
+        <target state="translated">Wahlmöglichkeiten</target>
+      </trans-unit><trans-unit id="2382280829296466299" datatype="html">
+        <source>Plan choices provide several alternatives (containing modules) from which the user has to select exactly one.</source>
+        <target state="translated">Wahlmöglichkeiten bestehen aus mehreren Alternativen (die wiederum Module enthalten) aus denen der Benutzer pro Wahlmöglichkeit genau eine auswählen muss.</target>
+      </trans-unit>
+      
+      <trans-unit id="7515883357904500238" datatype="html">
+        <source>Are you sure?</source>
+        <target state="translated">Sind Sie sicher?</target>
+      </trans-unit><trans-unit id="701276183374590869" datatype="html">
+        <source>You are about to remove <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> from your plan.</source>
+        <target state="translated">Sie sind gerade dabei, <x id="START_TAG_SPAN"/><x id="INTERPOLATION"/><x id="CLOSE_TAG_SPAN"/> aus ihrem Studienplan zu entfernen.</target>
+      </trans-unit>
+      
+      <trans-unit id="1640194314437667323" datatype="html">
+        <source>Confirm removal</source>
+        <target state="translated">Entfernen bestätigen</target>
+      </trans-unit>
+      <trans-unit id="6029829557483992391" datatype="html">
+        <source>Total: <x id="PH"/> CP</source>
+        <target state="translated">Insgesamt: <x id="PH"/> CP</target>
+      </trans-unit><trans-unit id="4914546203623630813" datatype="html">
+        <source><x id="START_TAG_SPAN"/><x id="CLOSE_TAG_SPAN"/> Semester</source>
+        <target state="translated"><x id="START_TAG_SPAN"/><x id="CLOSE_TAG_SPAN"/> Semester</target>
+      </trans-unit><trans-unit id="5992492023250804803" datatype="html">
+        <source><x id="INTERPOLATION"/> CP</source>
+        <target state="translated"><x id="INTERPOLATION"/> CP</target>
+      </trans-unit>
+      
+      <trans-unit id="577131335532312808" datatype="html">
+        <source>Add semester</source>
+        <target state="translated">Semester hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="3319869189033007427" datatype="html">
+        <source>Remove semester</source>
+        <target state="translated">Remove semester</target>
+      </trans-unit>
+      <trans-unit id="7229322658964992431" datatype="html">
+        <source>Required prerequisite</source>
+        <target state="translated">Zwingende Voraussetzung</target>
+      </trans-unit>
+      <trans-unit id="6755381006589246462" datatype="html">
+        <source>Recommended prerequisite</source>
+        <target state="translated">Empfohlene Voraussetzung</target>
+      </trans-unit>
+      <trans-unit id="7056768688674505176" datatype="html">
+        <source>Courses are loading...</source>
+        <target state="translated">Studiengänge werden geladen...</target>
+      </trans-unit>
+      <trans-unit id="2278319217411345860" datatype="html">
+        <source>No active courses.</source>
+        <target state="translated">Keine aktiven Studiengänge.</target>
+      </trans-unit><trans-unit id="8631859997228132412" datatype="html">
+        <source>There was an error</source>
+        <target state="translated">Ein Fehler ist aufgetreten</target>
+      </trans-unit><trans-unit id="7774334028863100396" datatype="html">
+        <source>Reason: <x id="INTERPOLATION"/></source>
+        <target state="translated">Grund: <x id="INTERPOLATION"/></target>
+      </trans-unit><trans-unit id="4073798495355008043" datatype="html">
+        <source>You may need to reload the page. If this problem persists, please report it.</source>
+        <target state="translated">Sie müssen die Seite neu laden. Sollte das Problem weiterhin bestehen, bitte melden Sie es an den Betreiber.</target>
+      </trans-unit>
+      
+      
+      <trans-unit id="6942914903641996670" datatype="html">
+        <source>Reload page</source>
+        <target state="translated">Seite neu laden</target>
+      </trans-unit>
+      
+      <trans-unit id="1142309888461362059" datatype="html">
+        <source>Winter term</source>
+        <target state="translated">Wintersemester</target>
+      </trans-unit>
+      <trans-unit id="5589642560160244286" datatype="html">
+        <source>Summer term</source>
+        <target state="translated">Sommersemester</target>
+      </trans-unit><trans-unit id="1769763767639879766" datatype="html">
+        <source>Obsolete after</source>
+        <target state="translated">Veraltet nach</target>
+      </trans-unit><trans-unit id="7997702578492367872" datatype="html">
+        <source>If this date is set, users can not add this plan after the given date and users that already use this plan will get a warning. Consider adding migration options if you make a plan obsolete.</source>
+        <target state="translated">Falls hier ein Datum angegeben ist, können Benutzer diesen Plan nach Ablauf dieses Datums nicht mehr zu ihrem Konto hinzufügen. Nutzern, die diesen Plan bereits benutzen, wird eine Warnung angezeigt. In der Regel haben obsolete Pläne Migrationsoptionen.</target>
+      </trans-unit><trans-unit id="6104334456357948331" datatype="html">
+        <source>Migratable to</source>
+        <target state="translated">Migrierbar zu</target>
+      </trans-unit><trans-unit id="4236709710210809425" datatype="html">
+        <source>User can migrate this plan to all plans that are given here. This is usually done for plans that became obsolete because a newer version (to which the old plan sould be migrated) became available.</source>
+        <target state="translated">Benutzer können diesen Plan zu allen hier angegebenen Plänen migrieren. Beispielsweise können bei alten Studiengangsversionen die jeweils neuen Versionen hier angegeben werden, um dem Nutzer den Wechsel zur neuen Version zu ermöglichen.</target>
+      </trans-unit><trans-unit id="277347696579019699" datatype="html">
+        <source>Comma-separated list of plan IDs</source>
+        <target state="translated">Kommagetrennte Liste von Plan-IDs</target>
+      </trans-unit><trans-unit id="1349547954574351547" datatype="html">
+        <source>Add category</source>
+        <target state="translated">Kategorie hinzufügen</target>
+      </trans-unit><trans-unit id="3522485995867593012" datatype="html">
+        <source>A plan has to have at least one start term.</source>
+        <target state="translated">Ein Plan muss mindestens ein mögliches Startsemester haben.</target>
+      </trans-unit><trans-unit id="5648281208762033715" datatype="html">
+        <source>Show and edit categories</source>
+        <target state="translated">Kategorien anzeigen und bearbeiten</target>
+      </trans-unit><trans-unit id="4884411217909849041" datatype="html">
+        <source>Hide categories</source>
+        <target state="translated">Kategorien verstecken</target>
+      </trans-unit><trans-unit id="5909243995607931670" datatype="html">
+        <source>Show and edit plan choices</source>
+        <target state="translated">Wahlmöglichkeiten anzeigen und bearbeiten</target>
+      </trans-unit><trans-unit id="5959810954549640247" datatype="html">
+        <source>Hide plan choices</source>
+        <target state="translated">Wahlmöglichkeiten verstecken</target>
+      </trans-unit>
+      <trans-unit id="1420436207595466503" datatype="html">
+        <source>Multiple courses</source>
+        <target state="translated">Mehrere Studiengänge</target>
+      </trans-unit><trans-unit id="4786933982996566259" datatype="html">
+        <source>No visible courses</source>
+        <target state="translated">Keine sichtbaren Studiengänge</target>
+      </trans-unit><trans-unit id="1716574804778299534" datatype="html">
+        <source>No courses</source>
+        <target state="translated">Keine Studiengänge</target>
+      </trans-unit><trans-unit id="1397786939123704307" datatype="html">
+        <source>RWTH Curriculum Planner</source>
+        <target state="translated">RWTH Studienverlaufsplaner</target>
+      </trans-unit><trans-unit id="1256697319281470794" datatype="html">
+        <source>Show this problem</source>
+        <target state="translated">Diese Problem wieder anzeigen</target>
+      </trans-unit><trans-unit id="6404285662311920422" datatype="html">
+        <source>Hide this problem</source>
+        <target state="translated">Diese Problem verstecken</target>
+      </trans-unit><trans-unit id="1867992058937397585" datatype="html">
+        <source>Module</source>
+        <target state="translated">Modul</target>
+      </trans-unit><trans-unit id="692797457766922083" datatype="html">
+        <source>Go to this problem</source>
+        <target state="translated">Zu diesem Problem gehen</target>
+      </trans-unit><trans-unit id="4902817035128594900" datatype="html">
+        <source>Description</source>
+        <target state="translated">Beschreibung</target>
+      </trans-unit>
+      
+      <trans-unit id="4221042196936324014" datatype="html">
+        <source>Redo</source>
+        <target state="translated">Wiederholen</target>
+      </trans-unit>
+      <trans-unit id="1959989882528099355" datatype="html">
+        <source>Add course</source>
+        <target state="translated">Studiengang hinzufügen</target>
+      </trans-unit><trans-unit id="798066276988263173" datatype="html">
+        <source>Visible courses</source>
+        <target state="translated">Angezeigte Studiengänge</target>
+      </trans-unit>
+      
+      <trans-unit id="5716859601539932392" datatype="html">
+        <source>Course settings</source>
+        <target state="translated">Studiengangs-Einstellungen</target>
+      </trans-unit><trans-unit id="5779056291747305363" datatype="html">
+        <source>Hidden Problems</source>
+        <target state="translated">Versteckte Probleme</target>
+      </trans-unit><trans-unit id="7854578989283397034" datatype="html">
+        <source>Not logged in</source>
+        <target state="translated">Nicht eingeloggt</target>
+      </trans-unit>
+      
+      <trans-unit id="7507948636555938109" datatype="html">
+        <source>Log out</source>
+        <target state="translated">Ausloggen</target>
+      </trans-unit>
+      <trans-unit id="2336550011721758066" datatype="html">
+        <source>Log in</source>
+        <target state="translated">Einloggen</target>
+      </trans-unit>
+      <trans-unit id="8350842278008299220" datatype="html">
+        <source>There is a problem with the server.</source>
+        <target state="translated">Es gibt ein Problem mit dem Server.</target>
+      </trans-unit>
+      <trans-unit id="5386215031897064267" datatype="html">
+        <source>This module has the module "<x id="PH"/>" as an unmet prerequisite.</source>
+        <target state="translated">Diese Modul hat das Modul "<x id="PH"/>" als eine nicht erfüllte Voraussetzung.</target>
+      </trans-unit>
+      <trans-unit id="2549450298718173447" datatype="html">
+        <source>This module has the module "<x id="PH"/>" as an unmet recommended prerequisite.</source>
+        <target state="translated">Diese Modul hat das Modul "<x id="PH"/>" als eine nicht erfüllte empfohlene Voraussetzung.</target>
+      </trans-unit>
+      <trans-unit id="5034696448542476129" datatype="html">
+        <source>This module has an unmet prerequisite.</source>
+        <target state="translated">Diese Modul hat eine nicht erfüllte Voraussetzung.</target>
+      </trans-unit>
+      <trans-unit id="882788310440734883" datatype="html">
+        <source>This module has an unmet recommended prerequisite.</source>
+        <target state="translated">Diese Modul hat eine nicht erfüllte empfohlene Voraussetzung.</target>
+      </trans-unit>
+      <trans-unit id="9121875193395299826" datatype="html">
+        <source>This module can only be taken with <x id="PH"/> CP or more.</source>
+        <target state="translated">Diese Modul kann nur mit <x id="PH"/> CP oder mehr angemeldet werden.</target>
+      </trans-unit><trans-unit id="4177950327381540025" datatype="html">
+        <source>The course <x id="PH"/> has more than 30 CP worth of preponed modules.</source>
+        <target state="translated">Die vorgezogenen Module im Studiengang <x id="PH"/> sind mehr als 30 CP wert.</target>
+      </trans-unit>
+      <trans-unit id="5751227249305722805" datatype="html">
+        <source>Status of this module is unknown.</source>
+        <target state="translated">Der Status des Modul ist unbekannt.</target>
+      </trans-unit><trans-unit id="860395747928002518" datatype="html">
+        <source>The course "<x id="PH"/>" has no selected choice of "<x id="PH_1"/>".</source>
+        <target state="translated">Für den Studiengang "<x id="PH"/>" wurde keine Auswahl in "<x id="PH_1"/>" getroffen.</target>
+      </trans-unit><trans-unit id="2895941032361926600" datatype="html">
+        <source>The course "<x id="PH"/> (<x id="PH_1"/>)" is obsolete and should be migrated to a newer version.</source>
+        <target state="translated">Der Studiengang "<x id="PH"/>" ist nicht mehr gültig und sollte zu einer neueren Version migriert werden.</target>
+      </trans-unit><trans-unit id="7561810936153049028" datatype="html">
+        <source>The course "<x id="PH"/> (<x id="PH_1"/>)" is obsolete.</source>
+        <target state="translated">Der Studiengang "<x id="PH"/>" ist nicht mehr gültig.</target>
+      </trans-unit><trans-unit id="8252925367734366799" datatype="html">
+        <source>The plan "<x id="PH"/> (<x id="PH_1"/>)" is not published.</source>
+        <target state="translated">Der Plan "<x id="PH"/> (<x id="PH_1"/>)" is nicht veröffentlicht.</target>
+      </trans-unit><trans-unit id="4838766874470354475" datatype="html">
+        <source>There is a problem with the database.</source>
+        <target state="translated">Es gibt ein Problem mit der Datenbank.</target>
+      </trans-unit><trans-unit id="132428287841707177" datatype="html">
+        <source>Your browser may not support the local testing mode; you may have to log in or use a different browser.</source>
+        <target state="translated">Möglicherweise unterstützt ihr Browser den lokalen Testmodus nicht. Versuchen Sie sich einzuloggen oder einen anderen Browser zu benutzen.</target>
+      </trans-unit><trans-unit id="3628127143071124194" datatype="html">
+        <source>SS</source>
+        <target state="translated">SS</target>
+      </trans-unit><trans-unit id="2776201535634372722" datatype="html">
+        <source>WS</source>
+        <target state="translated">WS</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,181 @@
+<div #modal class="modal"
+     [class.active]="moduleKey"
+     (keyup.escape)="close()"
+     (keyup.enter)="_apply()"
+     tabindex="0">
+    <a (click)="close()" class="href modal-overlay" aria-label="Close"></a>
+    <div class="modal-container" *ngIf="moduleKey">
+        <div class="modal-header">
+            <a class="href btn btn-clear float-right" aria-label="Close" (click)="close()"></a>
+            <div class="modal-title h5">
+                <ng-container i18n>Properties of
+                    <span *ngIf="_module.original.name" class="text-bold">{{_loc.select(_module.original.name)}}</span>
+                    <span *ngIf="!_module.original.name" class="text-bold">new plan</span>
+                    ({{moduleKey.str}})
+                </ng-container>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="content">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>ID</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <span class="id">{{moduleKey.moduleId}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Name</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <vp-localized-text-input [(locString)]="module.name" [emptyAllowed]="false"></vp-localized-text-input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Short name (optional)</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <vp-localized-text-input [(locString)]="module.nameShort"></vp-localized-text-input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Extra info (optional)</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <vp-localized-text-input [(locString)]="module.extraInfo"></vp-localized-text-input>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>ECTS</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <input class="form-input"
+                                   type="number"
+                                   placeholder="no value" i18n-placeholder
+                                   [class.is-error]="!_validEcts()"
+                                   [min]="0" [max]="999"
+                                   [(ngModel)]="module.ects">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>SWS (optional)</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <input class="form-input"
+                                   type="number"
+                                   placeholder="no value" i18n-placeholder
+                                   [min]="0" [max]="999"
+                                   [(ngModel)]="module.sws">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Cycle</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <input class="form-input"
+                                   type="number"
+                                   placeholder="no value" i18n-placeholder
+                                   [class.is-error]="!_validCycle()"
+                                   [min]="1" [max]="99"
+                                   [(ngModel)]="module.cycle">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Required ECTS (optional)</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <input class="form-input"
+                                   type="number"
+                                   placeholder="no value" i18n-placeholder
+                                   [min]="1" [max]="999"
+                                   [(ngModel)]="module.requiredEcts">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Category</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <select class="form-select" [class.is-error]="!_validCategory()"
+                                    [(ngModel)]="module.category">
+                                <option [ngValue]="-1">
+                                    <ng-container i18n>(no category)</ng-container>
+                                </option>
+                                <option *ngFor="let category of _provider.plans.get(moduleKey.planId).categories; let index = index"
+                                        [ngValue]="index">
+                                    {{_loc.select(category)}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Prepone allowed</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <div class="form-group">
+                                <label class="form-switch">
+                                    <input type="checkbox" [(ngModel)]="module.preponeAllowed">
+                                    <i class="form-icon"></i>
+                                    <ng-container *ngIf="module.preponeAllowed" i18n>yes</ng-container>
+                                    <ng-container *ngIf="!module.preponeAllowed" i18n>no</ng-container>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-4 col-sm-12">
+                            <label class="form-label" i18n>Prerequisites</label>
+                        </div>
+                        <div class="col-8 col-sm-12">
+                            <div class="requirement" *ngFor="let requirement of module.requirements">
+                                <select class="form-select" [class.is-error]="!_validRequirement(requirement)"
+                                        [(ngModel)]="requirement.moduleId">
+                                    <option *ngFor="let reqModKey of _reqSelectKeys"
+                                            [value]="reqModKey.moduleId">
+                                        {{_loc.select(_modules.get(reqModKey).name)}} ({{reqModKey.str}})
+                                    </option>
+                                </select>
+                                <div class="form-switch">
+                                    <label class="form-switch">
+                                        <input type="checkbox" [(ngModel)]="requirement.required">
+                                        <i class="form-icon"></i>
+                                        <ng-container i18n>Required</ng-container>:
+                                        <ng-container *ngIf="requirement.required" i18n>yes</ng-container>
+                                        <ng-container *ngIf="!requirement.required" i18n>no</ng-container>
+                                    </label>
+                                    <button class="btn btn-link btn-sm" (click)="_removeReq(requirement)">
+                                        <i class="icon btn-icon icon-delete"></i>
+                                        <ng-container i18n>Remove</ng-container>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary btn-sm" (click)="_addReq()">
+                                <i class="icon btn-icon icon-plus"></i>
+                                <ng-container i18n>Add prerequisite</ng-container>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-error float-left" (click)="_delete()">
+                <i class="btn-icon icon icon-delete"></i> <ng-container i18n>Remove module</ng-container>
+            </button>
+            <button class="btn btn-success" [disabled]="!_isValid()" (click)="_apply()">
+                <i class="btn-icon icon icon-check"></i> <ng-container i18n>Confirm</ng-container>
+            </button>
+        </div>
+    </div>
+</div>
+

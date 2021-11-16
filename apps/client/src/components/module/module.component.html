@@ -1,0 +1,43 @@
+<ng-template #moduleName>
+    <span #nameElement class="module-name">
+        {{_moduleCardTitle}}
+    </span>
+</ng-template>
+
+<vp-module-badges [moduleKey]="moduleKey"></vp-module-badges>
+
+<ng-template #ects>
+    <span class="module-ects">
+        {{_modules.get(moduleKey).ects}}
+    </span>
+</ng-template>
+
+<div *ngIf="!compact">
+    <div class="module-top"
+         [class.tooltip]="_showNameTooltip"
+         [attr.data-tooltip]="_loc.select(_modules.get(moduleKey).name)">
+        <ng-container *ngTemplateOutlet="moduleName"></ng-container>
+    </div>
+    <div class="module-bottom">
+        <span class="module-sws" *ngIf="_modules.get(moduleKey).sws != undefined">
+            {{_modules.get(moduleKey).sws}}
+        </span>
+        <span class="module-extra" *ngIf="_modules.get(moduleKey).extraInfo">
+            {{_loc.select(_modules.get(moduleKey).extraInfo)}}
+        </span>
+        <ng-container *ngTemplateOutlet="ects"></ng-container>
+        <span class="clear-float"></span>
+    </div>
+</div>
+
+<div *ngIf="compact" class="compact">
+    <span [class.tooltip]="_showNameTooltip"
+          [attr.data-tooltip]="_loc.select(_modules.get(moduleKey).name)">
+        <ng-container *ngTemplateOutlet="moduleName"></ng-container>
+    </span>
+    <span [class.tooltip]="_compactTooltip"
+          [attr.data-tooltip]="_compactTooltip">
+        <ng-container *ngTemplateOutlet="ects"></ng-container>
+    </span>
+    <span class="clear-float"></span>
+</div>

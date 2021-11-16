@@ -1,0 +1,98 @@
+@use "sass:math";
+
+@import "variables";
+@import "mixins";
+
+:host
+{
+    display: contents;
+}
+
+.scroll-container
+{
+    overflow: auto;
+    will-change: transform;
+    max-height: 100%;
+    min-height: 100%;
+}
+
+.scroll-indicator
+{
+    position: absolute;
+
+    opacity: 1;
+    transition: opacity 200ms $default-transition-function, border-color $default-transition;
+
+    &.hidden { opacity: 0 }
+    &:not(.hidden) { cursor: pointer; }
+
+    @mixin animation($border-dir)
+    {
+        @include blink-animation(
+            scroll-indicator-#{$border-dir},
+            border-#{$border-dir}-color,
+            $plan-table-scroll-indicator-color,
+            transparentize($plan-table-scroll-indicator-color-active, 0.5),
+            2s);
+    }
+
+    &.up
+    {
+        @include arrow(up, $plan-table-scroll-indicator-size);
+
+        &:not(:hover) { border-bottom-color: $plan-table-scroll-indicator-color; }
+        @include animation(bottom);
+
+        top: $plan-table-scroll-indicator-distance;
+
+        // TODO: Remove noinspection on Webstorm 2021.2
+        //noinspection CssInvalidFunction
+        left: calc(#{math.div($plan-table-category-width, 2)} - #{$plan-table-scroll-indicator-size});
+    }
+
+    &.down
+    {
+        @include arrow(down, $plan-table-scroll-indicator-size);
+
+        &:not(:hover) { border-top-color: $plan-table-scroll-indicator-color; }
+        @include animation(top);
+
+        bottom: $plan-table-scroll-indicator-distance;
+
+        // TODO: Remove noinspection on Webstorm 2021.2
+        //noinspection CssInvalidFunction
+        left: calc(#{math.div($plan-table-category-width, 2)} - #{$plan-table-scroll-indicator-size});
+    }
+
+    &.right
+    {
+        @include arrow(right, $plan-table-scroll-indicator-size);
+
+        &:not(:hover) { border-left-color: $plan-table-scroll-indicator-color; }
+        @include animation(left);
+
+        right: $plan-table-scroll-indicator-distance;
+        transform: translate(0, -$plan-table-scroll-indicator-size);
+
+        $shadow-color: transparentize($gray-color-light, 0.7);
+        border-top-color: $shadow-color !important;
+        border-bottom-color: $shadow-color !important;
+        box-shadow: 0 0 10px 10px $shadow-color;
+    }
+
+    &.left
+    {
+        @include arrow(left, $plan-table-scroll-indicator-size);
+
+        &:not(:hover) { border-right-color: $plan-table-scroll-indicator-color; }
+        @include animation(right);
+
+        left: calc(#{$plan-table-category-width} - 30px);
+        transform: translate(0, -$plan-table-scroll-indicator-size);
+    }
+
+    &:not(hidden):hover
+    {
+        border-color: $plan-table-scroll-indicator-color-active;
+    }
+}

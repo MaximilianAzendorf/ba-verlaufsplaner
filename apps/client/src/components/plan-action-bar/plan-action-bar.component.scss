@@ -1,0 +1,36 @@
+@import "variables";
+
+.navbar
+{
+    background-color: $gray-color-light;
+
+    padding: 0.1rem 0.6rem 0.1rem 0.6rem;
+}
+
+.bar-colored
+{
+    color: $gray-color-dark;
+
+    &:focus
+    {
+        box-shadow: none;
+    }
+}
+
+.maintainer-switch
+{
+    background: mix($warning-color, yellow, 35%);
+    padding: 0 0.3rem 0 1.3rem;
+    margin-left: -1rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    user-select: none;
+
+    &.tooltip::after
+    {
+        position: absolute;
+        top: 100%;
+        left: 0.4rem;
+        transform: unset;
+    }
+}

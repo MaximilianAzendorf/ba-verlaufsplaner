@@ -1,0 +1,102 @@
+@import "variables";
+
+:host
+{
+    text-rendering: geometricPrecision;
+    display: block;
+    position: absolute;
+    top: -6px;
+    right: -6px;
+
+    :host-context(.cdk-drag-preview) &
+    {
+        display: none;
+    }
+}
+
+.badge-overlay
+{
+    $y-displacement: 24px;
+    $hover-tolerance: 12px;
+
+    position: absolute;
+    user-select: auto;
+    right: 0;
+    top: ($y-displacement - $hover-tolerance);
+    padding-top: $hover-tolerance;
+    display: inline-block;
+    z-index: 9999;
+
+    opacity: 0;
+    transform: translate(0, $unit-3);
+    transition: opacity .2s, transform .2s;
+
+    ::ng-deep .module-badge:not(:hover) &
+    {
+        pointer-events: none;
+    }
+
+    ::ng-deep .module-badge:hover &
+    {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    .overlay-content
+    {
+        display: block;
+        text-align: left;
+        hyphens: none;
+        background: $dark-color;
+        border-radius: $border-radius;
+        color: $light-color;
+        font-size: $font-size-sm;
+        padding: $unit-2 $unit-2;
+        z-index: $zindex-3;
+        max-width: $module-width * 1.33;
+        width: max-content;
+        overflow: hidden;
+
+        .btn-group
+        {
+            margin-top: 0.3rem;
+        }
+    }
+
+    .link-action
+    {
+        display: inline-block;
+        width: 100%;
+        text-align: right;
+        height: 1.3em;
+        cursor: pointer;
+        padding-left: 0.4rem;
+        padding-top: 0.1rem;
+        color: $gray-color;
+        font-size: $font-size-smaller;
+
+        text-decoration: none;
+        transition: color $default-transition;
+
+        i
+        {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 0.8rem;
+
+            &.jam-undo { font-size: 0.65rem; }
+        }
+
+        .link-action-text
+        {
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 0.15rem;
+        }
+
+        &:hover
+        {
+            color: $primary-color;
+        }
+    }
+}

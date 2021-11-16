@@ -1,0 +1,25 @@
+<div #scrollContainer
+     class="scroll-container"
+     vpZonelessEvent [events]="['scroll']" (eventHandler)="_scrollPositionChanged()">
+    <ng-content></ng-content>
+</div>
+<div #scrollIndicatorUp *ngIf="_componentOverflowingY"
+     class="scroll-indicator up hidden hide-responsive"
+     (click)="_scrollTo(undefined, 0)">
+    <div class="arrow-down"></div>
+</div>
+<div #scrollIndicatorDown *ngIf="_componentOverflowingY"
+     class="scroll-indicator down hidden hide-responsive"
+     (click)="_scrollTo(undefined, 1)">
+    <div class="arrow-down"></div>
+</div>
+<div #scrollIndicatorRight *ngIf="_componentOverflowingX"
+     class="scroll-indicator right hidden hide-responsive"
+     (click)="_scrollTo(1, undefined)">
+    <div class="arrow-down"></div>
+</div>
+<div #scrollIndicatorLeft *ngIf="_componentOverflowingX"
+     class="scroll-indicator left hidden hide-responsive"
+     (click)="_scrollTo(0, undefined)">
+    <div class="arrow-down"></div>
+</div>

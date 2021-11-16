@@ -1,0 +1,33 @@
+<div class="cell-container"
+     [id]="_dragListName(group, offset)"
+     [class.droppable]="_logic.isDragging && _planMeta.getGroup(_logic.draggedModule) == group"
+     [cdkDropListConnectedTo]="_dragListConnections(group, offset)"
+     [cdkDropListData]="offset"
+     [cdkDropListEnterPredicate]="_cdkEnterPredicate(offset)"
+     vpZonelessEvent [events]="['mouseenter',  'mouseleave']" (eventHandler)="_mouseEventHandler($event)"
+     cdkDropList>
+
+    <div *ngFor="let moduleKey of _planMeta.getRelevantModules({offset: offset, group: group}); trackBy: _moduleKeyTrackFn"
+         class="module-wrapper"
+         cdkDrag
+         (cdkDragStarted)="_dragStarted($event)"
+         (cdkDragReleased)="_dragEnded($event)"
+         (cdkDragDropped)="_dragDropped($event)"
+         [cdkDragStartDelay]="{touch: 250, mouse: 0}"
+         [cdkDragData]="moduleKey"
+         [cdkDragDisabled]="_logic.offsetPast(offset)"
+         [cdkDragConstrainPosition]="_dragPosition.bind(this)">
+        <vp-module
+                [ngClass]="'group-color-' + _logic.groupIndex(group)"
+                [class.not-highlighted]="!_logic.isHighlighted(moduleKey)"
+                [moduleKey]="moduleKey"
+                [compact]="compact">
+        </vp-module>
+    </div>
+
+    <vp-failed-attempt-hint
+            *ngFor="let attemptRef of _planMeta.getRelevantFailedAttempts({offset: offset, group: group}); trackBy: _attemptTrackFn"
+            [attemptRef]="attemptRef">
+    </vp-failed-attempt-hint>
+    <div style="max-height: 0; overflow: hidden">&nbsp;</div>
+</div>
